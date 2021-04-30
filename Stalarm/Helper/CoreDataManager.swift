@@ -72,4 +72,15 @@ final class CoreDataManager {
         
         self.saveContext()
     }
+    
+    func addTimer(name: String, duration: Int32, music: String) {
+        let context = persistentContainer.viewContext
+        
+        let timer = CountdownTimer(context: context)
+        timer.name = name
+        timer.duration = duration
+        timer.music = music
+        
+        self.saveContext()
+    }
 }

@@ -8,6 +8,10 @@
 import Foundation
 
 struct Constants {
+    static let Hour = Array(0...24)
+    static let Minutes = Array(0...59)
+    static let Seconds = Array(0...59)
+    
     static let Timezones = [
         ("UTC-12:00", TimeZone(secondsFromGMT: -43200)),
         ("UTC-11:00 / ST", TimeZone(secondsFromGMT: -39600)),

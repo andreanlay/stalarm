@@ -48,6 +48,7 @@ class MainTabBarController: UITabBarController {
         addAlarmButton.setImage(UIImage(systemName: "alarm"), for: .normal)
         addAlarmButton.tintColor = .white
         addAlarmButton.isHidden = true
+        
         addAlarmButton.addTarget(self, action: #selector(addAlarmTapped), for: .touchUpInside)
         view.addSubview(addAlarmButton)
     }
@@ -73,7 +74,18 @@ class MainTabBarController: UITabBarController {
         addTimerButton.tintColor = .white
         addTimerButton.isHidden = true
         
+        addTimerButton.addTarget(self, action: #selector(addTimerTapped), for: .touchUpInside)
         view.addSubview(addTimerButton)
+    }
+    
+    @objc private func addTimerTapped() {
+        let storyboard = UIStoryboard(name: "AddTimer", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddTimerVC") as! AddTimerViewController
+
+        vc.delegate = self.eventDelegate
+        let navController = UINavigationController(rootViewController: vc)
+        
+        present(navController, animated: true, completion: nil)
     }
     
     @objc func raisedButtonTapped(_ sender: UIButton) {
