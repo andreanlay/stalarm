@@ -7,25 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D005E92263AB8BD0050D20A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E91263AB8BD0050D20A /* CoreDataManager.swift */; };
+		7D005E95263AFF630050D20A /* Calendar+ConvertTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E94263AFF630050D20A /* Calendar+ConvertTimeZone.swift */; };
+		7D005E97263B0C370050D20A /* ConvertionHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E96263B0C370050D20A /* ConvertionHistoryTableViewController.swift */; };
+		7D005E9B263BBAC10050D20A /* AddAlarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D005E9A263BBAC10050D20A /* AddAlarm.storyboard */; };
 		7D9E2B332639603F00834653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B322639603F00834653 /* AppDelegate.swift */; };
 		7D9E2B352639603F00834653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B342639603F00834653 /* SceneDelegate.swift */; };
-		7D9E2B372639603F00834653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B362639603F00834653 /* ViewController.swift */; };
+		7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B362639603F00834653 /* AddAlarmViewController.swift */; };
 		7D9E2B3A2639603F00834653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E2B382639603F00834653 /* Main.storyboard */; };
 		7D9E2B3D2639603F00834653 /* Stalarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B3B2639603F00834653 /* Stalarm.xcdatamodeld */; };
 		7D9E2B3F2639604000834653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E2B3E2639604000834653 /* Assets.xcassets */; };
 		7D9E2B422639604000834653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E2B402639604000834653 /* LaunchScreen.storyboard */; };
+		7DF108AE263968EA007BA26A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108AD263968EA007BA26A /* MainTabBarController.swift */; };
+		7DF108B126396C38007BA26A /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B026396C38007BA26A /* EventListViewController.swift */; };
+		7DF108B526398E9E007BA26A /* ConvertTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B426398E9E007BA26A /* ConvertTimeViewController.swift */; };
+		7DF108B92639A0EF007BA26A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B82639A0EF007BA26A /* MainTabBarViewController.swift */; };
+		7DF108BE263A775D007BA26A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108BD263A775D007BA26A /* MainViewController.swift */; };
+		7DF108C5263A88DF007BA26A /* TimezonePickerBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108C4263A88DF007BA26A /* TimezonePickerBackgroundView.swift */; };
+		7DF108CC263A9476007BA26A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108CB263A9476007BA26A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D005E91263AB8BD0050D20A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7D005E94263AFF630050D20A /* Calendar+ConvertTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+ConvertTimeZone.swift"; sourceTree = "<group>"; };
+		7D005E96263B0C370050D20A /* ConvertionHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertionHistoryTableViewController.swift; sourceTree = "<group>"; };
+		7D005E9A263BBAC10050D20A /* AddAlarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAlarm.storyboard; sourceTree = "<group>"; };
 		7D9E2B2F2639603F00834653 /* Stalarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stalarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E2B322639603F00834653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9E2B342639603F00834653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D9E2B362639603F00834653 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D9E2B362639603F00834653 /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 		7D9E2B392639603F00834653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D9E2B3C2639603F00834653 /* Stalarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stalarm.xcdatamodel; sourceTree = "<group>"; };
 		7D9E2B3E2639604000834653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D9E2B412639604000834653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D9E2B432639604000834653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF108AD263968EA007BA26A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7DF108B026396C38007BA26A /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		7DF108B426398E9E007BA26A /* ConvertTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTimeViewController.swift; sourceTree = "<group>"; };
+		7DF108B82639A0EF007BA26A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		7DF108BD263A775D007BA26A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7DF108C4263A88DF007BA26A /* TimezonePickerBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezonePickerBackgroundView.swift; sourceTree = "<group>"; };
+		7DF108CB263A9476007BA26A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +61,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D005E90263AB8AE0050D20A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7D005E91263AB8BD0050D20A /* CoreDataManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7D005E93263AFF480050D20A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7D005E94263AFF630050D20A /* Calendar+ConvertTimeZone.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7D005E9C263BBB600050D20A /* Add Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				7D9E2B362639603F00834653 /* AddAlarmViewController.swift */,
+			);
+			path = "Add Alarm";
+			sourceTree = "<group>";
+		};
 		7D9E2B262639603F00834653 = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +104,83 @@
 		7D9E2B312639603F00834653 /* Stalarm */ = {
 			isa = PBXGroup;
 			children = (
-				7D9E2B322639603F00834653 /* AppDelegate.swift */,
-				7D9E2B342639603F00834653 /* SceneDelegate.swift */,
-				7D9E2B362639603F00834653 /* ViewController.swift */,
-				7D9E2B382639603F00834653 /* Main.storyboard */,
+				7D005E93263AFF480050D20A /* Extensions */,
+				7D005E90263AB8AE0050D20A /* Helper */,
+				7DF108CA263A9453007BA26A /* Utils */,
+				7DF108BA263A5FED007BA26A /* Application */,
+				7DF108AF26396C22007BA26A /* Controllers */,
+				7DF108BB263A5FFB007BA26A /* Views */,
 				7D9E2B3E2639604000834653 /* Assets.xcassets */,
-				7D9E2B402639604000834653 /* LaunchScreen.storyboard */,
 				7D9E2B432639604000834653 /* Info.plist */,
-				7D9E2B3B2639603F00834653 /* Stalarm.xcdatamodeld */,
+				7DF108BC263A6005007BA26A /* Core Data */,
+				7DF108C9263A93CE007BA26A /* Custom Views */,
 			);
 			path = Stalarm;
+			sourceTree = "<group>";
+		};
+		7DF108AF26396C22007BA26A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7DF108BF263A7C45007BA26A /* Time Convertion */,
+				7D005E9C263BBB600050D20A /* Add Alarm */,
+				7DF108B026396C38007BA26A /* EventListViewController.swift */,
+				7DF108B82639A0EF007BA26A /* MainTabBarViewController.swift */,
+				7DF108BD263A775D007BA26A /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7DF108BA263A5FED007BA26A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7D9E2B322639603F00834653 /* AppDelegate.swift */,
+				7D9E2B342639603F00834653 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7DF108BB263A5FFB007BA26A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D9E2B382639603F00834653 /* Main.storyboard */,
+				7D9E2B402639604000834653 /* LaunchScreen.storyboard */,
+				7D005E9A263BBAC10050D20A /* AddAlarm.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7DF108BC263A6005007BA26A /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				7D9E2B3B2639603F00834653 /* Stalarm.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		7DF108BF263A7C45007BA26A /* Time Convertion */ = {
+			isa = PBXGroup;
+			children = (
+				7DF108B426398E9E007BA26A /* ConvertTimeViewController.swift */,
+				7D005E96263B0C370050D20A /* ConvertionHistoryTableViewController.swift */,
+			);
+			path = "Time Convertion";
+			sourceTree = "<group>";
+		};
+		7DF108C9263A93CE007BA26A /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				7DF108AD263968EA007BA26A /* MainTabBarController.swift */,
+				7DF108C4263A88DF007BA26A /* TimezonePickerBackgroundView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		7DF108CA263A9453007BA26A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7DF108CB263A9476007BA26A /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D005E9B263BBAC10050D20A /* AddAlarm.storyboard in Resources */,
 				7D9E2B422639604000834653 /* LaunchScreen.storyboard in Resources */,
 				7D9E2B3F2639604000834653 /* Assets.xcassets in Resources */,
 				7D9E2B3A2639603F00834653 /* Main.storyboard in Resources */,
@@ -141,9 +255,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9E2B3D2639603F00834653 /* Stalarm.xcdatamodeld in Sources */,
-				7D9E2B372639603F00834653 /* ViewController.swift in Sources */,
+				7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */,
+				7DF108AE263968EA007BA26A /* MainTabBarController.swift in Sources */,
+				7DF108B92639A0EF007BA26A /* MainTabBarViewController.swift in Sources */,
+				7D005E95263AFF630050D20A /* Calendar+ConvertTimeZone.swift in Sources */,
+				7DF108C5263A88DF007BA26A /* TimezonePickerBackgroundView.swift in Sources */,
+				7DF108B126396C38007BA26A /* EventListViewController.swift in Sources */,
+				7D005E97263B0C370050D20A /* ConvertionHistoryTableViewController.swift in Sources */,
+				7D005E92263AB8BD0050D20A /* CoreDataManager.swift in Sources */,
+				7DF108B526398E9E007BA26A /* ConvertTimeViewController.swift in Sources */,
+				7DF108BE263A775D007BA26A /* MainViewController.swift in Sources */,
 				7D9E2B332639603F00834653 /* AppDelegate.swift in Sources */,
 				7D9E2B352639603F00834653 /* SceneDelegate.swift in Sources */,
+				7DF108CC263A9476007BA26A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				INFOPLIST_FILE = Stalarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				INFOPLIST_FILE = Stalarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
