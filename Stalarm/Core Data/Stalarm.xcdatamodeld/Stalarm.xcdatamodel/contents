@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ConvertionHistory" representedClassName="ConvertionHistory" syncable="YES" codeGenerationType="class">
-        <attribute name="attribute" optional="YES"/>
+    <entity name="Alarm" representedClassName="Alarm" syncable="YES" codeGenerationType="class">
+        <attribute name="active" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="music" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="repeatDay" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer" customClassName="[String]"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="walkDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="ConversionHistory" representedClassName="ConversionHistory" syncable="YES" codeGenerationType="class">
         <attribute name="resultDate" optional="YES" attributeType="String"/>
         <attribute name="sourceDate" optional="YES" attributeType="String"/>
         <attribute name="sourceTimeZone" optional="YES" attributeType="String"/>
         <attribute name="targetTimeZone" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ConvertionHistory" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="ConversionHistory" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Alarm" positionX="-45" positionY="27" width="128" height="119"/>
     </elements>
 </model>

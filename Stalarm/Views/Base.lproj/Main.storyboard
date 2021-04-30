@@ -155,7 +155,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoT-sH-jmF">
                                 <rect key="frame" x="0.0" y="453" width="414" height="360"/>
                                 <connections>
-                                    <segue destination="h58-ZK-fv3" kind="embed" id="s6J-tK-jJc"/>
+                                    <segue destination="h58-ZK-fv3" kind="embed" identifier="ConversionHistorySegue" id="s6J-tK-jJc"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -204,16 +204,16 @@
             </objects>
             <point key="canvasLocation" x="1813.0434782608697" y="474.77678571428567"/>
         </scene>
-        <!--Convertion History Table View Controller-->
+        <!--Conversion History Table View Controller-->
         <scene sceneID="QZj-2u-yaZ">
             <objects>
-                <tableViewController id="h58-ZK-fv3" customClass="ConvertionHistoryTableViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="h58-ZK-fv3" customClass="ConversionHistoryTableViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ubr-y7-vag">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConvertionHistoryCell" id="4aI-c8-mXJ" customClass="ConvertionHistoryCell" customModule="Stalarm" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConvertionHistoryCell" id="4aI-c8-mXJ" customClass="ConversionHistoryCell" customModule="Stalarm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4aI-c8-mXJ" id="u8w-sd-2jg">
@@ -294,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="1811.594202898551" y="1010.4910714285713"/>
         </scene>
-        <!--Main Tab Bar View Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="2V8-iz-t0S">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GJP-1T-erm" customClass="MainTabBarViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GJP-1T-erm" customClass="MainTabBarController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I2w-4d-HO9" customClass="MainTabBar" customModule="Stalarm" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

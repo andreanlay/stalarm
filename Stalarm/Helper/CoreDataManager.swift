@@ -32,10 +32,10 @@ final class CoreDataManager {
         }
     }
     
-    func addConvertionHistory(sourceDate: String, sourceTZ: String, targetTZ: String, resultDate: String) {
-        let context = CoreDataManager.shared.persistentContainer.viewContext
+    func addConversionHistory(sourceDate: String, sourceTZ: String, targetTZ: String, resultDate: String) {
+        let context = persistentContainer.viewContext
         
-        let newHistory = ConvertionHistory(context: context)
+        let newHistory = ConversionHistory(context: context)
         newHistory.sourceDate = sourceDate
         newHistory.sourceTimeZone = sourceTZ
         newHistory.targetTimeZone = targetTZ
@@ -44,19 +44,20 @@ final class CoreDataManager {
         self.saveContext()
     }
     
-    func deleteConvertionHistory(history: ConvertionHistory) {
+    func deleteConvertionHistory(history: ConversionHistory) {
         let context = CoreDataManager.shared.persistentContainer.viewContext
         context.delete(history)
         
         self.saveContext()
     }
     
-    func fetchAllConvertionHistory() -> [ConvertionHistory] {
+    func fetchAllConversionHistory() -> [ConversionHistory] {
         let context = self.persistentContainer.viewContext
         
-        let request = ConvertionHistory.fetchRequest() as NSFetchRequest<ConvertionHistory>
+        let request = ConversionHistory.fetchRequest() as NSFetchRequest<ConversionHistory>
         let histories = try? context.fetch(request)
         
         return histories!
     }
+    
 }

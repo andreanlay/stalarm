@@ -50,7 +50,6 @@ class ConvertTimeViewController: MainViewController {
         let toPicker = createPickerView(withTag: 1)
         toTimezoneField.inputView = toPicker.0
         toTimezoneField.inputAccessoryView = toPicker.1
-
     }
     
     @objc private func timezonePickerCancelTapped() {
@@ -86,13 +85,22 @@ class ConvertTimeViewController: MainViewController {
 
         let formattedSourceDate = convertDateToString(for: sourceDatePicker.date)
         let formattedTargetDate = convertDateToString(for: targetDatePicker.date)
-        CoreDataManager.shared.addConvertionHistory(sourceDate: formattedSourceDate, sourceTZ: selectedFromTimezone, targetTZ: selectedToTimezone, resultDate: formattedTargetDate)
+        CoreDataManager.shared.addConversionHistory(sourceDate: formattedSourceDate, sourceTZ: selectedFromTimezone, targetTZ: selectedToTimezone, resultDate: formattedTargetDate)
+        self.conversionTableDelegate?.newDataAdded()
     }
     
     @IBAction func swapTapped(_ sender: UIButton) {
         swap(&fromTimezoneField.text, &toTimezoneField.text)
         swap(&sourceDatePicker.date, &targetDatePicker.date)
         swap(&selectedFromTimezone, &selectedToTimezone)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ConversionHistorySegue" {
+            if let destination = segue.destination as? ConversionHistoryTableViewController {
+                self.conversionTableDelegate = destination
+            }
+        }
     }
 }
 

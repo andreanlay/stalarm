@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		7D005E92263AB8BD0050D20A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E91263AB8BD0050D20A /* CoreDataManager.swift */; };
 		7D005E95263AFF630050D20A /* Calendar+ConvertTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E94263AFF630050D20A /* Calendar+ConvertTimeZone.swift */; };
-		7D005E97263B0C370050D20A /* ConvertionHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E96263B0C370050D20A /* ConvertionHistoryTableViewController.swift */; };
+		7D005E97263B0C370050D20A /* ConversionHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E96263B0C370050D20A /* ConversionHistoryTableViewController.swift */; };
 		7D005E9B263BBAC10050D20A /* AddAlarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D005E9A263BBAC10050D20A /* AddAlarm.storyboard */; };
+		7D005E9E263BC4F60050D20A /* RepeatDayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E9D263BC4F60050D20A /* RepeatDayButton.swift */; };
 		7D9E2B332639603F00834653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B322639603F00834653 /* AppDelegate.swift */; };
 		7D9E2B352639603F00834653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B342639603F00834653 /* SceneDelegate.swift */; };
 		7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B362639603F00834653 /* AddAlarmViewController.swift */; };
@@ -18,10 +19,10 @@
 		7D9E2B3D2639603F00834653 /* Stalarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B3B2639603F00834653 /* Stalarm.xcdatamodeld */; };
 		7D9E2B3F2639604000834653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E2B3E2639604000834653 /* Assets.xcassets */; };
 		7D9E2B422639604000834653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E2B402639604000834653 /* LaunchScreen.storyboard */; };
-		7DF108AE263968EA007BA26A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108AD263968EA007BA26A /* MainTabBarController.swift */; };
+		7DF108AE263968EA007BA26A /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108AD263968EA007BA26A /* MainTabBar.swift */; };
 		7DF108B126396C38007BA26A /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B026396C38007BA26A /* EventListViewController.swift */; };
 		7DF108B526398E9E007BA26A /* ConvertTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B426398E9E007BA26A /* ConvertTimeViewController.swift */; };
-		7DF108B92639A0EF007BA26A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B82639A0EF007BA26A /* MainTabBarViewController.swift */; };
+		7DF108B92639A0EF007BA26A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B82639A0EF007BA26A /* MainTabBarController.swift */; };
 		7DF108BE263A775D007BA26A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108BD263A775D007BA26A /* MainViewController.swift */; };
 		7DF108C5263A88DF007BA26A /* TimezonePickerBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108C4263A88DF007BA26A /* TimezonePickerBackgroundView.swift */; };
 		7DF108CC263A9476007BA26A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108CB263A9476007BA26A /* Constants.swift */; };
@@ -30,8 +31,9 @@
 /* Begin PBXFileReference section */
 		7D005E91263AB8BD0050D20A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7D005E94263AFF630050D20A /* Calendar+ConvertTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+ConvertTimeZone.swift"; sourceTree = "<group>"; };
-		7D005E96263B0C370050D20A /* ConvertionHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertionHistoryTableViewController.swift; sourceTree = "<group>"; };
+		7D005E96263B0C370050D20A /* ConversionHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionHistoryTableViewController.swift; sourceTree = "<group>"; };
 		7D005E9A263BBAC10050D20A /* AddAlarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAlarm.storyboard; sourceTree = "<group>"; };
+		7D005E9D263BC4F60050D20A /* RepeatDayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDayButton.swift; sourceTree = "<group>"; };
 		7D9E2B2F2639603F00834653 /* Stalarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stalarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E2B322639603F00834653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9E2B342639603F00834653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,10 +43,10 @@
 		7D9E2B3E2639604000834653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D9E2B412639604000834653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D9E2B432639604000834653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DF108AD263968EA007BA26A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7DF108AD263968EA007BA26A /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		7DF108B026396C38007BA26A /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		7DF108B426398E9E007BA26A /* ConvertTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTimeViewController.swift; sourceTree = "<group>"; };
-		7DF108B82639A0EF007BA26A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		7DF108B82639A0EF007BA26A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		7DF108BD263A775D007BA26A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7DF108C4263A88DF007BA26A /* TimezonePickerBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezonePickerBackgroundView.swift; sourceTree = "<group>"; };
 		7DF108CB263A9476007BA26A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -124,7 +126,7 @@
 				7DF108BF263A7C45007BA26A /* Time Convertion */,
 				7D005E9C263BBB600050D20A /* Add Alarm */,
 				7DF108B026396C38007BA26A /* EventListViewController.swift */,
-				7DF108B82639A0EF007BA26A /* MainTabBarViewController.swift */,
+				7DF108B82639A0EF007BA26A /* MainTabBarController.swift */,
 				7DF108BD263A775D007BA26A /* MainViewController.swift */,
 			);
 			path = Controllers;
@@ -161,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				7DF108B426398E9E007BA26A /* ConvertTimeViewController.swift */,
-				7D005E96263B0C370050D20A /* ConvertionHistoryTableViewController.swift */,
+				7D005E96263B0C370050D20A /* ConversionHistoryTableViewController.swift */,
 			);
 			path = "Time Convertion";
 			sourceTree = "<group>";
@@ -169,8 +171,9 @@
 		7DF108C9263A93CE007BA26A /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				7DF108AD263968EA007BA26A /* MainTabBarController.swift */,
+				7DF108AD263968EA007BA26A /* MainTabBar.swift */,
 				7DF108C4263A88DF007BA26A /* TimezonePickerBackgroundView.swift */,
+				7D005E9D263BC4F60050D20A /* RepeatDayButton.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -256,12 +259,13 @@
 			files = (
 				7D9E2B3D2639603F00834653 /* Stalarm.xcdatamodeld in Sources */,
 				7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */,
-				7DF108AE263968EA007BA26A /* MainTabBarController.swift in Sources */,
-				7DF108B92639A0EF007BA26A /* MainTabBarViewController.swift in Sources */,
+				7DF108AE263968EA007BA26A /* MainTabBar.swift in Sources */,
+				7DF108B92639A0EF007BA26A /* MainTabBarController.swift in Sources */,
 				7D005E95263AFF630050D20A /* Calendar+ConvertTimeZone.swift in Sources */,
 				7DF108C5263A88DF007BA26A /* TimezonePickerBackgroundView.swift in Sources */,
+				7D005E9E263BC4F60050D20A /* RepeatDayButton.swift in Sources */,
 				7DF108B126396C38007BA26A /* EventListViewController.swift in Sources */,
-				7D005E97263B0C370050D20A /* ConvertionHistoryTableViewController.swift in Sources */,
+				7D005E97263B0C370050D20A /* ConversionHistoryTableViewController.swift in Sources */,
 				7D005E92263AB8BD0050D20A /* CoreDataManager.swift in Sources */,
 				7DF108B526398E9E007BA26A /* ConvertTimeViewController.swift in Sources */,
 				7DF108BE263A775D007BA26A /* MainViewController.swift in Sources */,

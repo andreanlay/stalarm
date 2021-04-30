@@ -7,15 +7,15 @@
 
 import UIKit
 
-class ConvertionHistoryCell: UITableViewCell {
+class ConversionHistoryCell: UITableViewCell {
     @IBOutlet weak var sourceTimeLabel: UILabel!
     @IBOutlet weak var sourceTZ: UILabel!
     @IBOutlet weak var resultTimeLabel: UILabel!
     @IBOutlet weak var resultTZ: UILabel!
 }
 
-class ConvertionHistoryTableViewController: UITableViewController {
-    var histories = [ConvertionHistory]()
+class ConversionHistoryTableViewController: UITableViewController {
+    var histories = [ConversionHistory]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ConvertionHistoryTableViewController: UITableViewController {
     }
     
     private func fetchHistories() {
-        histories = CoreDataManager.shared.fetchAllConvertionHistory()
+        histories = CoreDataManager.shared.fetchAllConversionHistory()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,7 +41,7 @@ class ConvertionHistoryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ConvertionHistoryCell") as! ConvertionHistoryCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ConvertionHistoryCell") as! ConversionHistoryCell
         
         let history = histories[indexPath.row]
         cell.sourceTimeLabel.text = history.sourceDate
@@ -54,7 +54,7 @@ class ConvertionHistoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { _,_,_ in
-            CoreDataManager.shared.deleteConvertionHistory(history: self.histories[indexPath.row])
+            CoreDataManager.shared.deleteConversionHistory(history: self.histories[indexPath.row])
             self.fetchHistories()
             self.tableView.reloadData()
         }
