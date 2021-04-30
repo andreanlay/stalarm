@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ConvertionHistory" representedClassName="ConvertionHistory" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES"/>
+        <attribute name="resultDate" optional="YES" attributeType="String"/>
+        <attribute name="sourceDate" optional="YES" attributeType="String"/>
+        <attribute name="sourceTimeZone" optional="YES" attributeType="String"/>
+        <attribute name="targetTimeZone" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ConvertionHistory" positionX="-63" positionY="-18" width="128" height="104"/>
+    </elements>
 </model>
