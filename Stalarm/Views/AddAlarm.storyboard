@@ -1,28 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Alarm-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddAlarmVC" id="Y6W-OH-hqX" customClass="AddAlarmViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-Dl-ptv">
+                                <rect key="frame" x="20" y="31" width="156" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alarm Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="By1-mg-G7F">
+                                <rect key="frame" x="20" y="67.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDV-Pc-mbx">
+                                <rect key="frame" x="20" y="120.5" width="38" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOc-I6-NHK">
+                                <rect key="frame" x="20" y="173" width="54" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="iEp-0c-QP1">
+                                <rect key="frame" x="310" y="110" width="84" height="41"/>
+                                <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="Ivc-ss-C4U"/>
+                                </constraints>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HTq-Ro-8Bg">
+                                <rect key="frame" x="124" y="167" width="270" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wb-hB-jaF" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uEc-wN-Ka8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0s-gf-aCb" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="0.0" width="30" height="32"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="M">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BRv-Xb-xNG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqR-i3-hki" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                        <rect key="frame" x="80" y="0.0" width="30" height="32"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="T">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Yqu-86-Leb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-rg-Tzo" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="32"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="W">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0W6-0t-amK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1s-25-3dR" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="0.0" width="30" height="32"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="T">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="drD-0O-NGQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIp-cI-h36" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                        <rect key="frame" x="200" y="0.0" width="30" height="32"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="F">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C5K-Vc-Qh7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNP-Ss-bYf" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="32"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FP0-ls-aVL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STf-w4-mdF">
+                                <rect key="frame" x="20" y="225" width="45.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hie-KT-MnQ">
+                                <rect key="frame" x="233" y="218" width="160.5" height="34"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CAY-7U-Fby">
+                                        <rect key="frame" x="144" y="10" width="12.5" height="16.5"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Music" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqd-Kw-dTV">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="34"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="9Qh-mi-VzD"/>
+                                            <constraint firstAttribute="width" constant="140" id="jwv-i3-ObF"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Hqd-Kw-dTV" secondAttribute="bottom" id="0uF-wX-kfq"/>
+                                    <constraint firstItem="Hqd-Kw-dTV" firstAttribute="top" secondItem="Hie-KT-MnQ" secondAttribute="top" id="3BT-UI-Via"/>
+                                    <constraint firstItem="CAY-7U-Fby" firstAttribute="leading" secondItem="Hqd-Kw-dTV" secondAttribute="trailing" constant="4" id="8OL-g1-cvm"/>
+                                    <constraint firstAttribute="trailing" secondItem="CAY-7U-Fby" secondAttribute="trailing" constant="4" id="PCE-7W-U11"/>
+                                    <constraint firstItem="CAY-7U-Fby" firstAttribute="top" secondItem="Hie-KT-MnQ" secondAttribute="top" constant="8" id="Ugs-od-SX7"/>
+                                    <constraint firstItem="Hqd-Kw-dTV" firstAttribute="leading" secondItem="Hie-KT-MnQ" secondAttribute="leading" id="X4g-vW-njx"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snooze Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6o-dk-90r">
+                                <rect key="frame" x="20" y="265" width="140" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Walking duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAp-Oc-GWb">
+                                <rect key="frame" x="20" y="361" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minimumValue="0.5" maximumValue="5" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hu2-Nt-kR8">
+                                <rect key="frame" x="300" y="299" width="94" height="32"/>
+                                <connections>
+                                    <action selector="walkingMinutesChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="gQM-Mu-rIm"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ0-f4-2sB">
+                                <rect key="frame" x="200" y="305" width="80" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="FI7-CV-4rG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hie-KT-MnQ" secondAttribute="trailing" constant="20.5" id="0Re-gW-9TT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mmC-Dl-ptv" secondAttribute="trailing" id="2N8-dd-wHh"/>
+                            <constraint firstItem="mmC-Dl-ptv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="5va-lc-OxX"/>
+                            <constraint firstItem="mmC-Dl-ptv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="31" id="6aJ-un-1g5"/>
+                            <constraint firstItem="WOc-I6-NHK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="7PH-44-sdb"/>
+                            <constraint firstItem="HTq-Ro-8Bg" firstAttribute="top" secondItem="iEp-0c-QP1" secondAttribute="bottom" constant="16" id="9cN-Sq-hRe"/>
+                            <constraint firstItem="WOc-I6-NHK" firstAttribute="top" secondItem="wDV-Pc-mbx" secondAttribute="bottom" constant="32" id="EWZ-Qb-9hb"/>
+                            <constraint firstItem="wDV-Pc-mbx" firstAttribute="top" secondItem="By1-mg-G7F" secondAttribute="bottom" constant="19" id="F7J-Dr-jy0"/>
+                            <constraint firstItem="Hie-KT-MnQ" firstAttribute="top" secondItem="HTq-Ro-8Bg" secondAttribute="bottom" constant="19" id="HXP-FA-nnr"/>
+                            <constraint firstItem="iEp-0c-QP1" firstAttribute="top" secondItem="By1-mg-G7F" secondAttribute="bottom" constant="9" id="JXK-fy-KCE"/>
+                            <constraint firstItem="WQ0-f4-2sB" firstAttribute="top" secondItem="d6o-dk-90r" secondAttribute="bottom" constant="18.5" id="OMe-6p-QcG"/>
+                            <constraint firstItem="Hu2-Nt-kR8" firstAttribute="leading" secondItem="WQ0-f4-2sB" secondAttribute="trailing" constant="20" id="PvX-se-GYM"/>
+                            <constraint firstItem="Hu2-Nt-kR8" firstAttribute="top" secondItem="d6o-dk-90r" secondAttribute="bottom" constant="12.5" id="VQf-PQ-boN"/>
+                            <constraint firstItem="STf-w4-mdF" firstAttribute="top" secondItem="WOc-I6-NHK" secondAttribute="bottom" constant="31.5" id="Vy8-08-BYR"/>
+                            <constraint firstItem="d6o-dk-90r" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="WuC-RX-jIx"/>
+                            <constraint firstItem="STf-w4-mdF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="XDv-6B-fA1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HTq-Ro-8Bg" secondAttribute="trailing" constant="20" id="ZLu-Eg-M8e"/>
+                            <constraint firstItem="d6o-dk-90r" firstAttribute="top" secondItem="STf-w4-mdF" secondAttribute="bottom" constant="19.5" id="cQZ-lj-qFl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hu2-Nt-kR8" secondAttribute="trailing" constant="20" id="coi-0v-ka3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="By1-mg-G7F" secondAttribute="trailing" constant="20" id="cph-R1-Ygk"/>
+                            <constraint firstItem="wDV-Pc-mbx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="fr4-OH-CkD"/>
+                            <constraint firstItem="By1-mg-G7F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ktQ-Np-ULP"/>
+                            <constraint firstItem="iEp-0c-QP1" firstAttribute="centerY" secondItem="wDV-Pc-mbx" secondAttribute="centerY" id="y6p-QK-Az0"/>
+                            <constraint firstItem="By1-mg-G7F" firstAttribute="top" secondItem="mmC-Dl-ptv" secondAttribute="bottom" constant="15" id="yKs-gS-DqT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iEp-0c-QP1" secondAttribute="trailing" constant="20" id="ygu-kb-bYM"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Alarm" id="uRX-iz-Xiw"/>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="alarmNameField" destination="By1-mg-G7F" id="EZV-mf-78C"/>
+                        <outlet property="alarmTriggerTime" destination="iEp-0c-QP1" id="hdT-Td-pWQ"/>
+                        <outlet property="walkingMinutesLabel" destination="WQ0-f4-2sB" id="iJa-Ie-Wgj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1813.0434782608697" y="18.75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
