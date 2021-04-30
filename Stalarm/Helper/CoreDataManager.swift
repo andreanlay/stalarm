@@ -44,7 +44,7 @@ final class CoreDataManager {
         self.saveContext()
     }
     
-    func deleteConvertionHistory(history: ConversionHistory) {
+    func deleteConversionHistory(history: ConversionHistory) {
         let context = CoreDataManager.shared.persistentContainer.viewContext
         context.delete(history)
         
@@ -60,4 +60,16 @@ final class CoreDataManager {
         return histories!
     }
     
+    func addAlarm(name: String, time: Date, repeatDay: [String], music: String, walkDuration: Double) {
+        let context = persistentContainer.viewContext
+        
+        let alarm = Alarm(context: context)
+        alarm.name = name
+        alarm.time = time
+        alarm.repeatDay = repeatDay
+        alarm.music = music
+        alarm.walkDuration = Int16(walkDuration * 60)
+        
+        self.saveContext()
+    }
 }

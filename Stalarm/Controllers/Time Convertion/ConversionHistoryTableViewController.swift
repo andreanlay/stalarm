@@ -62,3 +62,10 @@ class ConversionHistoryTableViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [delete])
     }
 }
+
+extension ConversionHistoryTableViewController: ConversionDataDelegate {
+    func newDataAdded() {
+        self.fetchHistories()
+        self.tableView.reloadData()
+    }
+}

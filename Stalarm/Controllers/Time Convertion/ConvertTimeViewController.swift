@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ConversionDataDelegate {
+    func newDataAdded()
+}
+
 class ConvertTimeViewController: MainViewController {
     @IBOutlet weak var fromTimezoneField: UITextField!
     @IBOutlet weak var toTimezoneField: UITextField!
@@ -15,6 +19,8 @@ class ConvertTimeViewController: MainViewController {
     
     private var selectedFromTimezone = "UTC / GMT"
     private var selectedToTimezone = "UTC / GMT"
+    
+    private var conversionTableDelegate: ConversionDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
