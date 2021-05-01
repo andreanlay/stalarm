@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingVC" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ9-ij-cik">
+                                <rect key="frame" x="0.0" y="44" width="414" height="667"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="uo4-HY-rXW">
+                                <rect key="frame" x="156" y="719" width="102.5" height="28"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.59215686270000001" green="0.3921568627" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="dgL-6Y-Shg"/>
+                                </connections>
+                            </pageControl>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rl-lo-dvY">
+                                <rect key="frame" x="94.5" y="763" width="225" height="48"/>
+                                <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="GMo-Eo-mX4"/>
+                                    <constraint firstAttribute="height" constant="48" id="avl-QH-5e7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Let's get disciplined!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="NBm-tl-ooj" kind="presentation" modalPresentationStyle="fullScreen" id="Akl-1d-3c6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uo4-HY-rXW" firstAttribute="top" secondItem="JZ9-ij-cik" secondAttribute="bottom" constant="8" symbolic="YES" id="0t6-sT-56y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="uo4-HY-rXW" secondAttribute="bottom" constant="115" id="4Md-Gc-5L3"/>
+                            <constraint firstItem="7rl-lo-dvY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="H9B-lJ-604"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JZ9-ij-cik" secondAttribute="trailing" id="Vhi-Z3-lro"/>
+                            <constraint firstItem="7rl-lo-dvY" firstAttribute="top" secondItem="uo4-HY-rXW" secondAttribute="bottom" constant="16" id="ZfT-dH-uIa"/>
+                            <constraint firstItem="JZ9-ij-cik" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="du1-id-qXb"/>
+                            <constraint firstItem="JZ9-ij-cik" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="p1b-bh-xwm"/>
+                            <constraint firstItem="uo4-HY-rXW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tKK-Vi-eHq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getDisciplinedButton" destination="7rl-lo-dvY" id="67J-97-rKD"/>
+                        <outlet property="pageControl" destination="uo4-HY-rXW" id="kCJ-81-Xae"/>
+                        <outlet property="scrollView" destination="JZ9-ij-cik" id="tgE-Ah-tt6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="9"/>
+        </scene>
+        <!--Permission Request View Controller-->
+        <scene sceneID="alm-8d-ncm">
+            <objects>
+                <viewController id="NBm-tl-ooj" customClass="PermissionRequestViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NlW-nn-MBx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding-notification" translatesAutoresizingMaskIntoConstraints="NO" id="zjJ-fS-Q8x">
+                                <rect key="frame" x="119" y="197" width="176" height="182"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="First, we need you to allow us to send you notification. This is needed to send you alarm notification." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Njm-To-uOi">
+                                <rect key="frame" x="38" y="387" width="339" height="368"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmv-RJ-ecK">
+                                <rect key="frame" x="94.5" y="763" width="225" height="48"/>
+                                <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Mg6-Yh-NZc"/>
+                                    <constraint firstAttribute="width" constant="225" id="ulO-Q3-cIQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Allow notification">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="allowNotificationTapped:" destination="NBm-tl-ooj" eventType="touchUpInside" id="qAW-tY-df9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="On5-Ee-z85"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zjJ-fS-Q8x" firstAttribute="centerX" secondItem="NlW-nn-MBx" secondAttribute="centerX" id="11G-ZS-1Ge"/>
+                            <constraint firstItem="mmv-RJ-ecK" firstAttribute="centerX" secondItem="NlW-nn-MBx" secondAttribute="centerX" id="1Np-rl-PhL"/>
+                            <constraint firstItem="On5-Ee-z85" firstAttribute="trailing" secondItem="Njm-To-uOi" secondAttribute="trailing" constant="37" id="Irw-ww-HBh"/>
+                            <constraint firstItem="Njm-To-uOi" firstAttribute="top" secondItem="zjJ-fS-Q8x" secondAttribute="bottom" constant="8" symbolic="YES" id="S5u-lw-epI"/>
+                            <constraint firstItem="mmv-RJ-ecK" firstAttribute="top" secondItem="Njm-To-uOi" secondAttribute="bottom" constant="8" symbolic="YES" id="SgZ-aL-oQK"/>
+                            <constraint firstItem="Njm-To-uOi" firstAttribute="leading" secondItem="On5-Ee-z85" secondAttribute="leading" constant="38" id="eEF-LC-JuA"/>
+                            <constraint firstItem="zjJ-fS-Q8x" firstAttribute="top" secondItem="On5-Ee-z85" secondAttribute="top" constant="153" id="gLu-Hj-OaC"/>
+                            <constraint firstItem="On5-Ee-z85" firstAttribute="bottom" secondItem="mmv-RJ-ecK" secondAttribute="bottom" constant="51" id="qzX-k4-iaf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ge2-UQ-NGH"/>
+                    <connections>
+                        <segue destination="6u4-WL-oLG" kind="presentation" identifier="ToMainSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="rio-aw-YTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCG-ND-ieI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.768115942029" y="8.7053571428571423"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Nop-9X-k8q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="6u4-WL-oLG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uhX-yD-oOn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxD-Zt-f2q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onboarding-notification" width="176" height="182"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
