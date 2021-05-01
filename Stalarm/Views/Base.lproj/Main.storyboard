@@ -16,14 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DsF-1n-72Y">
+                                <rect key="frame" x="20" y="160" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Alarm"/>
+                                    <segment title="Timer"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.59215686270000001" green="0.3921568627" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SegmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gsG-4K-CNy"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ch6-Fh-dhU">
+                                <rect key="frame" x="0.0" y="224" width="414" height="589"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DsF-1n-72Y" secondAttribute="trailing" constant="20" id="4id-rL-0fU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ch6-Fh-dhU" secondAttribute="trailing" id="6RB-1b-YDz"/>
+                            <constraint firstItem="DsF-1n-72Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Abu-7n-YbO"/>
+                            <constraint firstItem="Ch6-Fh-dhU" firstAttribute="top" secondItem="DsF-1n-72Y" secondAttribute="bottom" constant="33" id="Jvt-Vh-5SJ"/>
+                            <constraint firstItem="Ch6-Fh-dhU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pe0-LK-fnq"/>
+                            <constraint firstItem="DsF-1n-72Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eTy-ga-Eti"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ch6-Fh-dhU" secondAttribute="bottom" id="gnr-WP-9gp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My events" id="JBQ-ag-IHU"/>
+                    <connections>
+                        <outlet property="eventTable" destination="Ch6-Fh-dhU" id="Tyw-DJ-nbq"/>
+                        <outlet property="tableTypeSegmentedControl" destination="DsF-1n-72Y" id="1xL-Sn-KKm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1813.0434782608697" y="-254.46428571428569"/>
+        </scene>
+        <!--Event List Table View Controller-->
+        <scene sceneID="3A7-yH-Pj7">
+            <objects>
+                <tableViewController id="1ZN-Xh-zoM" customClass="EventListTableViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0xx-cE-eqj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="1ZN-Xh-zoM" id="Y0Q-uR-HG0"/>
+                            <outlet property="delegate" destination="1ZN-Xh-zoM" id="MBF-ek-Cp4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PG8-KZ-XCW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2726.0869565217395" y="-254.12946428571428"/>
         </scene>
         <!--Time Converter-->
         <scene sceneID="VU4-te-8UQ">

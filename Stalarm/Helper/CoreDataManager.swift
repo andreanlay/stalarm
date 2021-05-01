@@ -60,6 +60,15 @@ final class CoreDataManager {
         return histories!
     }
     
+    func fetchAllAlarm() -> [Alarm] {
+        let context = self.persistentContainer.viewContext
+        
+        let request = Alarm.fetchRequest() as NSFetchRequest<Alarm>
+        let alarms = try? context.fetch(request)
+        
+        return alarms!
+    }
+    
     func addAlarm(name: String, time: Date, repeatDay: [String], music: String, walkDuration: Double) {
         let context = persistentContainer.viewContext
         
@@ -73,6 +82,28 @@ final class CoreDataManager {
         self.saveContext()
     }
     
+    func setAlarmStatus(to status: Bool, for alarm: Alarm) {
+        alarm.active = status
+        
+        self.saveContext()
+    }
+    
+    func deleteAlarm(alarm: Alarm) {
+        let context = self.persistentContainer.viewContext
+        context.delete(alarm)
+        
+        self.saveContext()
+    }
+    
+    func fetchAllTimer() -> [CountdownTimer] {
+        let context = self.persistentContainer.viewContext
+        
+        let request = CountdownTimer.fetchRequest() as NSFetchRequest<CountdownTimer>
+        let timers = try? context.fetch(request)
+        
+        return timers!
+    }
+    
     func addTimer(name: String, duration: Int32, music: String) {
         let context = persistentContainer.viewContext
         
@@ -80,6 +111,19 @@ final class CoreDataManager {
         timer.name = name
         timer.duration = duration
         timer.music = music
+        
+        self.saveContext()
+    }
+    
+    func setTimerStatus(to status: Bool, for timer: CountdownTimer) {
+        timer.active = status
+        
+        self.saveContext()
+    }
+    
+    func deleteTimer(timer: CountdownTimer) {
+        let context = self.persistentContainer.viewContext
+        context.delete(timer)
         
         self.saveContext()
     }

@@ -24,6 +24,9 @@
 		7D866F7D263D54C5008B1FD8 /* PermissionRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F7C263D54C5008B1FD8 /* PermissionRequestViewController.swift */; };
 		7D866F7F263D5613008B1FD8 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F7E263D5613008B1FD8 /* SceneManager.swift */; };
 		7D866F81263D581B008B1FD8 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F80263D581B008B1FD8 /* NotificationManager.swift */; };
+		7D866F83263DA1FD008B1FD8 /* AlarmTriggered.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D866F82263DA1FD008B1FD8 /* AlarmTriggered.storyboard */; };
+		7D866F85263DA2F6008B1FD8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F84263DA2F6008B1FD8 /* GradientView.swift */; };
+		7D866F88263DA425008B1FD8 /* AlarmTriggeredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F87263DA425008B1FD8 /* AlarmTriggeredViewController.swift */; };
 		7D9E2B332639603F00834653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B322639603F00834653 /* AppDelegate.swift */; };
 		7D9E2B352639603F00834653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B342639603F00834653 /* SceneDelegate.swift */; };
 		7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B362639603F00834653 /* AddAlarmViewController.swift */; };
@@ -58,6 +61,9 @@
 		7D866F7C263D54C5008B1FD8 /* PermissionRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestViewController.swift; sourceTree = "<group>"; };
 		7D866F7E263D5613008B1FD8 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		7D866F80263D581B008B1FD8 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		7D866F82263DA1FD008B1FD8 /* AlarmTriggered.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlarmTriggered.storyboard; sourceTree = "<group>"; };
+		7D866F84263DA2F6008B1FD8 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		7D866F87263DA425008B1FD8 /* AlarmTriggeredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTriggeredViewController.swift; sourceTree = "<group>"; };
 		7D9E2B2F2639603F00834653 /* Stalarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stalarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E2B322639603F00834653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9E2B342639603F00834653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +163,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		7D866F86263DA408008B1FD8 /* Alarm Triggered */ = {
+			isa = PBXGroup;
+			children = (
+				7D866F87263DA425008B1FD8 /* AlarmTriggeredViewController.swift */,
+			);
+			path = "Alarm Triggered";
+			sourceTree = "<group>";
+		};
 		7D9E2B262639603F00834653 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +207,7 @@
 		7DF108AF26396C22007BA26A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7D866F86263DA408008B1FD8 /* Alarm Triggered */,
 				7D866F79263D4BF6008B1FD8 /* Onboarding */,
 				7D005EA1263C3F9E0050D20A /* Add Timer */,
 				7DF108BF263A7C45007BA26A /* Time Convertion */,
@@ -221,6 +236,7 @@
 				7D005E9A263BBAC10050D20A /* AddAlarm.storyboard */,
 				7D005E9F263C3F990050D20A /* AddTimer.storyboard */,
 				7D866F77263D48A2008B1FD8 /* Onboarding.storyboard */,
+				7D866F82263DA1FD008B1FD8 /* AlarmTriggered.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +266,7 @@
 				7D005E9D263BC4F60050D20A /* RepeatDayButton.swift */,
 				7D866F71263D285A008B1FD8 /* Alarm Cell */,
 				7D866F76263D29B1008B1FD8 /* Timer Cell */,
+				7D866F84263DA2F6008B1FD8 /* GradientView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -324,6 +341,7 @@
 				7D866F6E263D23DA008B1FD8 /* AlarmCell.xib in Resources */,
 				7D9E2B422639604000834653 /* LaunchScreen.storyboard in Resources */,
 				7D005EA0263C3F990050D20A /* AddTimer.storyboard in Resources */,
+				7D866F83263DA1FD008B1FD8 /* AlarmTriggered.storyboard in Resources */,
 				7D9E2B3F2639604000834653 /* Assets.xcassets in Resources */,
 				7D9E2B3A2639603F00834653 /* Main.storyboard in Resources */,
 				7D866F78263D48A2008B1FD8 /* Onboarding.storyboard in Resources */,
@@ -351,6 +369,7 @@
 				7DF108B126396C38007BA26A /* EventListViewController.swift in Sources */,
 				7D005E97263B0C370050D20A /* ConversionHistoryTableViewController.swift in Sources */,
 				7D866F7D263D54C5008B1FD8 /* PermissionRequestViewController.swift in Sources */,
+				7D866F85263DA2F6008B1FD8 /* GradientView.swift in Sources */,
 				7D005E92263AB8BD0050D20A /* CoreDataManager.swift in Sources */,
 				7DF108B526398E9E007BA26A /* ConvertTimeViewController.swift in Sources */,
 				7D866F7F263D5613008B1FD8 /* SceneManager.swift in Sources */,
@@ -359,6 +378,7 @@
 				7D9E2B332639603F00834653 /* AppDelegate.swift in Sources */,
 				7D9E2B352639603F00834653 /* SceneDelegate.swift in Sources */,
 				7DF108CC263A9476007BA26A /* Constants.swift in Sources */,
+				7D866F88263DA425008B1FD8 /* AlarmTriggeredViewController.swift in Sources */,
 				7D866F81263D581B008B1FD8 /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

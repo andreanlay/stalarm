@@ -12,6 +12,16 @@ struct Constants {
     static let Minutes = Array(0...59)
     static let Seconds = Array(0...59)
     
+    static let DayToCalendarInt = [
+        "SUN": 1,
+        "MON": 2,
+        "TUE": 3,
+        "WED": 4,
+        "THU": 5,
+        "FRI": 6,
+        "SAT": 7
+    ]
+    
     static let Timezones = [
         ("UTC-12:00", TimeZone(secondsFromGMT: -43200)),
         ("UTC-11:00 / ST", TimeZone(secondsFromGMT: -39600)),

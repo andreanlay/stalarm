@@ -54,13 +54,18 @@ class AddAlarmViewController: UIViewController {
     
     @objc private func saveTapped() {
         var processedRepeatDay = [String]()
+        
         repeatDay.forEach({ data in
             if data.1 {
                 processedRepeatDay.append(data.0)
             }
         })
         
+        
         CoreDataManager.shared.addAlarm(name: alarmNameField.text!, time: alarmTriggerTime.date, repeatDay: processedRepeatDay, music: alarmMusic, walkDuration: walkingDuration)
+        
+        NotificationManager.shared.scheduleRepeatedNotification(title: alarmNameField.text!, for: processedRepeatDay, on: alarmTriggerTime.date)
+        
         delegate?.newDataAdded()
         self.dismiss(animated: true, completion: nil)
     }

@@ -31,4 +31,44 @@ class NotificationManager {
         }
     }
     
+    private func getIdentifier(for title: String, on date: Date) -> String {
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+        
+        let identifier = "\(title)\(hour)\(minute)"
+        
+        return identifier
+    }
+    
+    func scheduleRepeatedNotification(title: String, for days: [String], on date: Date) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.subtitle = "Let's get moving!"
+        
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+        
+        let requestIdentifier = "\(title)\(hour)\(minute)"
+        
+        for day in days {
+            var dateComponents = DateComponents()
+            dateComponents.hour = hour
+            dateComponents.minute = minute
+            dateComponents.weekday = Constants.DayToCalendarInt[day]
+            dateComponents.timeZone = .current
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request)
+        }
+    }
+    
+    
+    func cancelNotifications(for alarm: Alarm) {
+        let identifier = getIdentifier(for: alarm.name!, on: alarm.time!)
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
+    }
+    
 }
