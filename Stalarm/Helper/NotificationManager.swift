@@ -41,10 +41,14 @@ class NotificationManager {
         return identifier
     }
     
-    func scheduleRepeatedNotification(title: String, for days: [String], on date: Date) {
+    func scheduleRepeatedNotification(title: String, for days: [String], on date: Date, stopDuration duration: Int16) {
         let content = UNMutableNotificationContent()
         content.title = title
         content.subtitle = "Let's get moving!"
+        content.userInfo = [
+            "title": title,
+            "duration": duration
+        ]
         
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)

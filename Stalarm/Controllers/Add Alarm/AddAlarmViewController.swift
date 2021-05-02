@@ -62,9 +62,9 @@ class AddAlarmViewController: UIViewController {
         })
         
         
-        CoreDataManager.shared.addAlarm(name: alarmNameField.text!, time: alarmTriggerTime.date, repeatDay: processedRepeatDay, music: alarmMusic, walkDuration: walkingDuration)
+        CoreDataManager.shared.addAlarm(name: alarmNameField.text!, time: alarmTriggerTime.date, repeatDay: processedRepeatDay, music: alarmMusic, walkDuration: Int16(walkingDuration * 60))
         
-        NotificationManager.shared.scheduleRepeatedNotification(title: alarmNameField.text!, for: processedRepeatDay, on: alarmTriggerTime.date)
+        NotificationManager.shared.scheduleRepeatedNotification(title: alarmNameField.text!, for: processedRepeatDay, on: alarmTriggerTime.date, stopDuration: Int16(walkingDuration * 60))
         
         delegate?.newDataAdded()
         self.dismiss(animated: true, completion: nil)

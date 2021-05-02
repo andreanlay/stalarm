@@ -27,6 +27,8 @@
 		7D866F83263DA1FD008B1FD8 /* AlarmTriggered.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D866F82263DA1FD008B1FD8 /* AlarmTriggered.storyboard */; };
 		7D866F85263DA2F6008B1FD8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F84263DA2F6008B1FD8 /* GradientView.swift */; };
 		7D866F88263DA425008B1FD8 /* AlarmTriggeredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F87263DA425008B1FD8 /* AlarmTriggeredViewController.swift */; };
+		7D866F8A263DA815008B1FD8 /* StopAlarmActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F89263DA815008B1FD8 /* StopAlarmActivityViewController.swift */; };
+		7D866F8C263E79F5008B1FD8 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F8B263E79F5008B1FD8 /* CircularProgressView.swift */; };
 		7D9E2B332639603F00834653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B322639603F00834653 /* AppDelegate.swift */; };
 		7D9E2B352639603F00834653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B342639603F00834653 /* SceneDelegate.swift */; };
 		7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B362639603F00834653 /* AddAlarmViewController.swift */; };
@@ -64,6 +66,8 @@
 		7D866F82263DA1FD008B1FD8 /* AlarmTriggered.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlarmTriggered.storyboard; sourceTree = "<group>"; };
 		7D866F84263DA2F6008B1FD8 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		7D866F87263DA425008B1FD8 /* AlarmTriggeredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTriggeredViewController.swift; sourceTree = "<group>"; };
+		7D866F89263DA815008B1FD8 /* StopAlarmActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAlarmActivityViewController.swift; sourceTree = "<group>"; };
+		7D866F8B263E79F5008B1FD8 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		7D9E2B2F2639603F00834653 /* Stalarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stalarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E2B322639603F00834653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9E2B342639603F00834653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				7D866F87263DA425008B1FD8 /* AlarmTriggeredViewController.swift */,
+				7D866F89263DA815008B1FD8 /* StopAlarmActivityViewController.swift */,
 			);
 			path = "Alarm Triggered";
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				7D866F71263D285A008B1FD8 /* Alarm Cell */,
 				7D866F76263D29B1008B1FD8 /* Timer Cell */,
 				7D866F84263DA2F6008B1FD8 /* GradientView.swift */,
+				7D866F8B263E79F5008B1FD8 /* CircularProgressView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D005EA3263C3FAD0050D20A /* AddTimerViewController.swift in Sources */,
+				7D866F8C263E79F5008B1FD8 /* CircularProgressView.swift in Sources */,
 				7D9E2B3D2639603F00834653 /* Stalarm.xcdatamodeld in Sources */,
 				7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */,
 				7D866F74263D286D008B1FD8 /* TimerCell.swift in Sources */,
@@ -380,6 +387,7 @@
 				7DF108CC263A9476007BA26A /* Constants.swift in Sources */,
 				7D866F88263DA425008B1FD8 /* AlarmTriggeredViewController.swift in Sources */,
 				7D866F81263D581B008B1FD8 /* NotificationManager.swift in Sources */,
+				7D866F8A263DA815008B1FD8 /* StopAlarmActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

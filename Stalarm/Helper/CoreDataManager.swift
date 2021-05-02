@@ -69,7 +69,7 @@ final class CoreDataManager {
         return alarms!
     }
     
-    func addAlarm(name: String, time: Date, repeatDay: [String], music: String, walkDuration: Double) {
+    func addAlarm(name: String, time: Date, repeatDay: [String], music: String, walkDuration: Int16) {
         let context = persistentContainer.viewContext
         
         let alarm = Alarm(context: context)
@@ -77,7 +77,7 @@ final class CoreDataManager {
         alarm.time = time
         alarm.repeatDay = repeatDay
         alarm.music = music
-        alarm.walkDuration = Int16(walkDuration * 60)
+        alarm.walkDuration = walkDuration
         
         self.saveContext()
     }
