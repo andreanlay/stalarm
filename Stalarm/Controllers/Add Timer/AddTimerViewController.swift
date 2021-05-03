@@ -51,7 +51,7 @@ class AddTimerViewController: UIViewController {
     
     @objc private func saveTapped() {
         let duration = Int32(durationData["hour"]! * 3600 + durationData["min"]! * 60 + durationData["sec"]!)
-        CoreDataManager.shared.addTimer(name: timerNameField.text!, duration: duration, music: timerMusicField.text!)
+        CoreDataManager.shared.addTimer(name: timerNameField.text!, duration: duration)
         delegate?.newDataAdded()
         self.dismiss(animated: true, completion: nil)
     }
