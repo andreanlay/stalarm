@@ -61,7 +61,7 @@ class StopAlarmActivityViewController: UIViewController {
             self.activityRecognizer.activityManager.stopActivityUpdates()
             self.activityLabel.text = "Finished. Have a nice day!"
             
-            AudioManager.shared.playSoundEffect(for: "alarmStopped")
+            AudioManager.shared.playSoundEffect(for: "Bell")
             
             finishButton.isHidden = false
         }

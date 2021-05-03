@@ -200,7 +200,7 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
         CoreDataManager.shared.setAlarmStatus(to: sender.isOn, for: alarm)
         
         if sender.isOn {
-            NotificationManager.shared.scheduleRepeatedNotification(title: alarm.name!, for: alarm.repeatDay!, on: alarm.time!, stopDuration: alarm.walkDuration)
+            NotificationManager.shared.scheduleRepeatedNotification(title: alarm.name!, for: alarm.repeatDay!, on: alarm.time!, stopDuration: alarm.walkDuration, musicName: alarm.music!)
         } else {
             NotificationManager.shared.cancelNotifications(for: alarm)
         }
@@ -209,7 +209,13 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
     @objc private func timerFired(timer: Timer) {
         let index = (timer.userInfo as? [String: Int])!["tag"]!
         timerList[index].duration -= 1
-        eventTable.reloadData()
+        let indexPath = IndexPath(row: index, section: 0)
+        eventTable.reloadRows(at: [indexPath], with: .fade)
+        
+        if timerList[index].duration == 0 {
+            AudioManager.shared.playSoundEffect(for: "Bell")
+            timerTrigger[index].invalidate()
+        }
     }
 }
 

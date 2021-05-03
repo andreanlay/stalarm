@@ -8,6 +8,12 @@
 import Foundation
 
 struct Constants {
+    static let AlarmSounds = [
+        "Adventure",
+        "Once Again",
+        "Tenderness"
+    ]
+    
     static let Hour = Array(0...24)
     static let Minutes = Array(0...59)
     static let Seconds = Array(0...59)

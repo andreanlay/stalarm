@@ -15,11 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             if !SceneManager.shared.firstLaunched {
-//                let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-//                let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingVC")
-                let storyboard = UIStoryboard(name: "AlarmTriggered", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "AlarmTriggeredVC")
-
+                let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingVC")
+                
                 let window = UIWindow(windowScene: windowScene)
                 window.rootViewController = vc
                 self.window = window

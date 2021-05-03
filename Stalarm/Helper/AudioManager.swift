@@ -11,7 +11,10 @@ class AudioManager {
     static let shared = AudioManager()
     
     let musicList = [
-        "alarmStopped": Bundle.main.url(forResource: "SuccessStopAlarm", withExtension: "wav"),
+        "Bell": Bundle.main.url(forResource: "Bell", withExtension: "wav"),
+        "Once Again": Bundle.main.url(forResource: "Once Again", withExtension: "wav"),
+        "Tenderness": Bundle.main.url(forResource: "Tenderness", withExtension: "wav"),
+        "Adventure": Bundle.main.url(forResource: "Adventure", withExtension: "wav"),
     ]
     
     var player = AVAudioPlayer()

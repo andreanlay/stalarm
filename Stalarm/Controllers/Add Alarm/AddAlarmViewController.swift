@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol MusicDataDelegate {
+    func passData(musicName: String)
+}
+
 class AddAlarmViewController: UIViewController {
     @IBOutlet weak var alarmNameField: UITextField!
     @IBOutlet weak var alarmTriggerTime: UIDatePicker!
     @IBOutlet weak var walkingMinutesLabel: UILabel!
+    @IBOutlet weak var musicNameField: UITextField!
     
-    private var alarmMusic = ""
+    private var alarmMusic = "Adventure"
     private var walkingDuration = 0.5
     private var repeatDay = [
         ("SUN", false),
@@ -61,10 +66,9 @@ class AddAlarmViewController: UIViewController {
             }
         })
         
-        
         CoreDataManager.shared.addAlarm(name: alarmNameField.text!, time: alarmTriggerTime.date, repeatDay: processedRepeatDay, music: alarmMusic, walkDuration: Int16(walkingDuration * 60))
         
-        NotificationManager.shared.scheduleRepeatedNotification(title: alarmNameField.text!, for: processedRepeatDay, on: alarmTriggerTime.date, stopDuration: Int16(walkingDuration * 60))
+        NotificationManager.shared.scheduleRepeatedNotification(title: alarmNameField.text!, for: processedRepeatDay, on: alarmTriggerTime.date, stopDuration: Int16(walkingDuration * 60), musicName: alarmMusic)
         
         delegate?.newDataAdded()
         self.dismiss(animated: true, completion: nil)
@@ -83,5 +87,25 @@ class AddAlarmViewController: UIViewController {
     @IBAction func walkingMinutesChanged(_ sender: UIStepper) {
         walkingDuration = sender.value
         walkingMinutesLabel.text = "\(walkingDuration) min"
+    }
+    
+    
+    @IBAction func MusicNameTapped(_ sender: UITextField) {
+        let storyboard = UIStoryboard(name: "AddAlarm", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "MusicListVC") as! MusicTableViewController
+        vc.delegate = self
+        vc.selectedMusic = alarmMusic
+        
+        let navController = UINavigationController(rootViewController: vc)
+        present(navController, animated: true, completion: nil)
+        sender.endEditing(true)
+    }
+
+}
+
+extension AddAlarmViewController: MusicDataDelegate {
+    func passData(musicName: String) {
+        self.alarmMusic = musicName
+        self.musicNameField.text = musicName
     }
 }

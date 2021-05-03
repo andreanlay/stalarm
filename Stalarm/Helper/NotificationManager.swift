@@ -41,7 +41,7 @@ class NotificationManager {
         return identifier
     }
     
-    func scheduleRepeatedNotification(title: String, for days: [String], on date: Date, stopDuration duration: Int16) {
+    func scheduleRepeatedNotification(title: String, for days: [String], on date: Date, stopDuration duration: Int16, musicName: String) {
         let content = UNMutableNotificationContent()
         content.title = title
         content.subtitle = "Let's get moving!"
@@ -49,7 +49,7 @@ class NotificationManager {
             "title": title,
             "duration": duration
         ]
-        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "SuccessStopAlarm.wav"))
+        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "Tenderness.wav"))
         
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)

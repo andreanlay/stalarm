@@ -104,13 +104,12 @@ final class CoreDataManager {
         return timers!
     }
     
-    func addTimer(name: String, duration: Int32, music: String) {
+    func addTimer(name: String, duration: Int32) {
         let context = persistentContainer.viewContext
         
         let timer = CountdownTimer(context: context)
         timer.name = name
         timer.duration = duration
-        timer.music = music
         
         self.saveContext()
     }

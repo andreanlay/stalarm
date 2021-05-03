@@ -183,7 +183,7 @@
                                         <rect key="frame" x="144" y="10" width="12.5" height="16.5"/>
                                         <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Music" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqd-Kw-dTV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Adventure" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqd-Kw-dTV">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="34"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -193,6 +193,9 @@
                                         <color key="textColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="MusicNameTapped:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="8rU-P5-4F6"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -241,6 +244,7 @@
                             <constraint firstItem="mmC-Dl-ptv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="5va-lc-OxX"/>
                             <constraint firstItem="mmC-Dl-ptv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="31" id="6aJ-un-1g5"/>
                             <constraint firstItem="WOc-I6-NHK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="7PH-44-sdb"/>
+                            <constraint firstItem="iEp-0c-QP1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wDV-Pc-mbx" secondAttribute="trailing" id="9GD-wV-EDd"/>
                             <constraint firstItem="HTq-Ro-8Bg" firstAttribute="top" secondItem="iEp-0c-QP1" secondAttribute="bottom" constant="16" id="9cN-Sq-hRe"/>
                             <constraint firstItem="WOc-I6-NHK" firstAttribute="top" secondItem="wDV-Pc-mbx" secondAttribute="bottom" constant="32" id="EWZ-Qb-9hb"/>
                             <constraint firstItem="wDV-Pc-mbx" firstAttribute="top" secondItem="By1-mg-G7F" secondAttribute="bottom" constant="19" id="F7J-Dr-jy0"/>
@@ -268,6 +272,7 @@
                     <connections>
                         <outlet property="alarmNameField" destination="By1-mg-G7F" id="EZV-mf-78C"/>
                         <outlet property="alarmTriggerTime" destination="iEp-0c-QP1" id="hdT-Td-pWQ"/>
+                        <outlet property="musicNameField" destination="Hqd-Kw-dTV" id="zjm-0N-0V9"/>
                         <outlet property="walkingMinutesLabel" destination="WQ0-f4-2sB" id="iJa-Ie-Wgj"/>
                     </connections>
                 </viewController>
@@ -275,8 +280,58 @@
             </objects>
             <point key="canvasLocation" x="1813.0434782608697" y="18.75"/>
         </scene>
+        <!--Music Table View Controller-->
+        <scene sceneID="Eu8-Cr-sa1">
+            <objects>
+                <tableViewController storyboardIdentifier="MusicListVC" id="B8Z-ym-z28" customClass="MusicTableViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HXP-Yh-51y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicCell" id="7uV-Kd-sCn" customClass="MusicCell" customModule="Stalarm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7uV-Kd-sCn" id="ebY-3i-qUs">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoQ-PW-LkN">
+                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OWK-dB-NiL">
+                                            <rect key="frame" x="375.5" y="11" width="18.5" height="16.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OWK-dB-NiL" firstAttribute="top" secondItem="ebY-3i-qUs" secondAttribute="top" constant="9" id="Q7h-NO-4xL"/>
+                                        <constraint firstAttribute="trailing" secondItem="OWK-dB-NiL" secondAttribute="trailing" constant="20" symbolic="YES" id="VPn-lk-Dpt"/>
+                                        <constraint firstItem="DoQ-PW-LkN" firstAttribute="leading" secondItem="ebY-3i-qUs" secondAttribute="leading" constant="20" symbolic="YES" id="XC1-Nb-RoH"/>
+                                        <constraint firstItem="DoQ-PW-LkN" firstAttribute="top" secondItem="ebY-3i-qUs" secondAttribute="top" constant="11" id="pCr-f3-zUT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkmarkImage" destination="OWK-dB-NiL" id="vSe-8X-Ng2"/>
+                                    <outlet property="musicName" destination="DoQ-PW-LkN" id="LnD-f2-fT7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B8Z-ym-z28" id="ASF-WC-zbf"/>
+                            <outlet property="delegate" destination="B8Z-ym-z28" id="3ko-EQ-5rf"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vr8-pP-3Vj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2700" y="19"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

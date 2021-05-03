@@ -30,7 +30,11 @@
 		7D866F8A263DA815008B1FD8 /* StopAlarmActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F89263DA815008B1FD8 /* StopAlarmActivityViewController.swift */; };
 		7D866F95263FA165008B1FD8 /* ActivityRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F94263FA165008B1FD8 /* ActivityRecognizer.swift */; };
 		7D866FBD263FE51D008B1FD8 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866FBC263FE51D008B1FD8 /* AudioManager.swift */; };
-		7D866FC1263FE944008B1FD8 /* SuccessStopAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D866FC0263FE944008B1FD8 /* SuccessStopAlarm.wav */; };
+		7D866FC1263FE944008B1FD8 /* Bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D866FC0263FE944008B1FD8 /* Bell.wav */; };
+		7D866FC7264005D3008B1FD8 /* Tenderness.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D866FC6264005D3008B1FD8 /* Tenderness.wav */; };
+		7D866FC926400751008B1FD8 /* Once Again.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D866FC826400751008B1FD8 /* Once Again.wav */; };
+		7D866FCB26400873008B1FD8 /* Adventure.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D866FCA26400873008B1FD8 /* Adventure.wav */; };
+		7D866FCD26401075008B1FD8 /* MusicTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866FCC26401075008B1FD8 /* MusicTableVIewController.swift */; };
 		7D9E2B332639603F00834653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B322639603F00834653 /* AppDelegate.swift */; };
 		7D9E2B352639603F00834653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B342639603F00834653 /* SceneDelegate.swift */; };
 		7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B362639603F00834653 /* AddAlarmViewController.swift */; };
@@ -71,7 +75,11 @@
 		7D866F89263DA815008B1FD8 /* StopAlarmActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAlarmActivityViewController.swift; sourceTree = "<group>"; };
 		7D866F94263FA165008B1FD8 /* ActivityRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecognizer.swift; sourceTree = "<group>"; };
 		7D866FBC263FE51D008B1FD8 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		7D866FC0263FE944008B1FD8 /* SuccessStopAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SuccessStopAlarm.wav; sourceTree = "<group>"; };
+		7D866FC0263FE944008B1FD8 /* Bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bell.wav; sourceTree = "<group>"; };
+		7D866FC6264005D3008B1FD8 /* Tenderness.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tenderness.wav; sourceTree = "<group>"; };
+		7D866FC826400751008B1FD8 /* Once Again.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Once Again.wav"; sourceTree = "<group>"; };
+		7D866FCA26400873008B1FD8 /* Adventure.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Adventure.wav; sourceTree = "<group>"; };
+		7D866FCC26401075008B1FD8 /* MusicTableVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableVIewController.swift; sourceTree = "<group>"; };
 		7D9E2B2F2639603F00834653 /* Stalarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stalarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E2B322639603F00834653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9E2B342639603F00834653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				7D9E2B362639603F00834653 /* AddAlarmViewController.swift */,
+				7D866FCC26401075008B1FD8 /* MusicTableVIewController.swift */,
 			);
 			path = "Add Alarm";
 			sourceTree = "<group>";
@@ -185,17 +194,20 @@
 		7D866FBE263FE8EC008B1FD8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7D866FBF263FE8F3008B1FD8 /* Sound Effect */,
+				7D866FBF263FE8F3008B1FD8 /* Sounds */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7D866FBF263FE8F3008B1FD8 /* Sound Effect */ = {
+		7D866FBF263FE8F3008B1FD8 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				7D866FC0263FE944008B1FD8 /* SuccessStopAlarm.wav */,
+				7D866FCA26400873008B1FD8 /* Adventure.wav */,
+				7D866FC826400751008B1FD8 /* Once Again.wav */,
+				7D866FC6264005D3008B1FD8 /* Tenderness.wav */,
+				7D866FC0263FE944008B1FD8 /* Bell.wav */,
 			);
-			path = "Sound Effect";
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		7D9E2B262639603F00834653 = {
@@ -367,11 +379,14 @@
 				7D866F75263D286D008B1FD8 /* TimerCell.xib in Resources */,
 				7D005E9B263BBAC10050D20A /* AddAlarm.storyboard in Resources */,
 				7D866F6E263D23DA008B1FD8 /* AlarmCell.xib in Resources */,
+				7D866FC926400751008B1FD8 /* Once Again.wav in Resources */,
+				7D866FC7264005D3008B1FD8 /* Tenderness.wav in Resources */,
 				7D9E2B422639604000834653 /* LaunchScreen.storyboard in Resources */,
 				7D005EA0263C3F990050D20A /* AddTimer.storyboard in Resources */,
 				7D866F83263DA1FD008B1FD8 /* AlarmTriggered.storyboard in Resources */,
-				7D866FC1263FE944008B1FD8 /* SuccessStopAlarm.wav in Resources */,
+				7D866FC1263FE944008B1FD8 /* Bell.wav in Resources */,
 				7D9E2B3F2639604000834653 /* Assets.xcassets in Resources */,
+				7D866FCB26400873008B1FD8 /* Adventure.wav in Resources */,
 				7D9E2B3A2639603F00834653 /* Main.storyboard in Resources */,
 				7D866F78263D48A2008B1FD8 /* Onboarding.storyboard in Resources */,
 			);
@@ -411,6 +426,7 @@
 				7D866F88263DA425008B1FD8 /* AlarmTriggeredViewController.swift in Sources */,
 				7D866F81263D581B008B1FD8 /* NotificationManager.swift in Sources */,
 				7D866F95263FA165008B1FD8 /* ActivityRecognizer.swift in Sources */,
+				7D866FCD26401075008B1FD8 /* MusicTableVIewController.swift in Sources */,
 				7D866F8A263DA815008B1FD8 /* StopAlarmActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
