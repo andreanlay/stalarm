@@ -15,6 +15,8 @@ class AlarmTriggeredViewController: UIViewController {
     var alarmTitle: String!
     var alarmStopDuration: Int16!
     
+    private var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +32,7 @@ class AlarmTriggeredViewController: UIViewController {
         dateLabel.text = formatter.string(from: Date())
         
         formatter.dateFormat = "h:mm:ss a"
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             self.timeLabel.text = formatter.string(from: Date())
         }
     }
@@ -48,6 +50,7 @@ class AlarmTriggeredViewController: UIViewController {
     }
     
     @IBAction func stopTapped(_ sender: UIButton) {
+        timer.invalidate()
         performSegue(withIdentifier: "StopActivitySegue", sender: self)
     }
     

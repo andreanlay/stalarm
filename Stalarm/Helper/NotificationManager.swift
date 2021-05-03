@@ -49,6 +49,7 @@ class NotificationManager {
             "title": title,
             "duration": duration
         ]
+        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "SuccessStopAlarm.wav"))
         
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)

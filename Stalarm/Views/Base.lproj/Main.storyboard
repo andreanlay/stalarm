@@ -12,7 +12,7 @@
         <!--My events-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EventListViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventListVC" id="BYZ-38-t0r" customClass="EventListViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,7 +348,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="2V8-iz-t0S">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GJP-1T-erm" customClass="MainTabBarController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="GJP-1T-erm" customClass="MainTabBarController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I2w-4d-HO9" customClass="MainTabBar" customModule="Stalarm" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

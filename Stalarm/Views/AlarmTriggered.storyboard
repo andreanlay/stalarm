@@ -129,12 +129,51 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 : 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrY-VV-V0V">
+                                <rect key="frame" x="160.5" y="292" width="93.5" height="45.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5At-qM-mAT">
+                                <rect key="frame" x="171" y="375.5" width="72.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewm-Sh-B4v">
+                                <rect key="frame" x="94.5" y="659" width="225" height="50"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.83529411760000005" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Ci-vO-Jjj"/>
+                                    <constraint firstAttribute="width" constant="225" id="Nh7-Wp-73I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="finishTapped:" destination="6Cx-68-7sW" eventType="touchUpInside" id="GaU-sm-bKS"/>
+                                    <action selector="snoozeTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yUX-9P-aej"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dR4-Je-2oD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5At-qM-mAT" firstAttribute="top" secondItem="SrY-VV-V0V" secondAttribute="bottom" constant="38" id="6lY-Fh-sDh"/>
+                            <constraint firstItem="5At-qM-mAT" firstAttribute="centerX" secondItem="BAC-9M-xYP" secondAttribute="centerX" id="72D-9i-GQw"/>
+                            <constraint firstItem="Ewm-Sh-B4v" firstAttribute="centerX" secondItem="BAC-9M-xYP" secondAttribute="centerX" id="BCt-cH-YNR"/>
                             <constraint firstItem="LB6-9x-1rb" firstAttribute="top" secondItem="dR4-Je-2oD" secondAttribute="top" constant="92" id="SP4-sk-HUY"/>
+                            <constraint firstItem="SrY-VV-V0V" firstAttribute="top" secondItem="LB6-9x-1rb" secondAttribute="bottom" constant="122.5" id="deS-L2-SP7"/>
                             <constraint firstItem="LB6-9x-1rb" firstAttribute="centerX" secondItem="BAC-9M-xYP" secondAttribute="centerX" id="ebC-jL-KEg"/>
+                            <constraint firstItem="Ewm-Sh-B4v" firstAttribute="top" secondItem="5At-qM-mAT" secondAttribute="bottom" constant="260.5" id="hCo-5E-7pR"/>
+                            <constraint firstItem="SrY-VV-V0V" firstAttribute="centerX" secondItem="BAC-9M-xYP" secondAttribute="centerX" id="jjd-Ta-ZF7"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -153,12 +192,24 @@
                     </view>
                     <navigationItem key="navigationItem" id="orD-1U-XyE"/>
                     <connections>
+                        <outlet property="activityCountdownLabel" destination="SrY-VV-V0V" id="ITJ-wb-bpl"/>
+                        <outlet property="activityLabel" destination="5At-qM-mAT" id="yZG-cL-5ln"/>
+                        <outlet property="finishButton" destination="Ewm-Sh-B4v" id="0lI-jt-Yfc"/>
                         <outlet property="walkDurationLabel" destination="LB6-9x-1rb" id="oRG-kU-skx"/>
+                        <segue destination="td9-rP-gSH" kind="presentation" identifier="ToMainSegue" modalPresentationStyle="fullScreen" id="E5L-iw-6Zd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j60-hQ-7vq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="799" y="76"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="bZv-Xc-LoS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="td9-rP-gSH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHV-ik-zJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1581" y="50"/>
         </scene>
     </scenes>
     <resources>
