@@ -50,7 +50,7 @@ class NotificationManager {
             "duration": duration,
             "music": musicName
         ]
-        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "Tenderness.wav"))
+        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "\(musicName).wav"))
         
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
