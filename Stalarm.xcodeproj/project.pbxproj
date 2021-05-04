@@ -14,7 +14,6 @@
 		7D005E9E263BC4F60050D20A /* RepeatDayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005E9D263BC4F60050D20A /* RepeatDayButton.swift */; };
 		7D005EA0263C3F990050D20A /* AddTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D005E9F263C3F990050D20A /* AddTimer.storyboard */; };
 		7D005EA3263C3FAD0050D20A /* AddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D005EA2263C3FAD0050D20A /* AddTimerViewController.swift */; };
-		7D866F68263D1F51008B1FD8 /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F67263D1F51008B1FD8 /* EventListTableViewController.swift */; };
 		7D866F6D263D23DA008B1FD8 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F6B263D23DA008B1FD8 /* AlarmCell.swift */; };
 		7D866F6E263D23DA008B1FD8 /* AlarmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D866F6C263D23DA008B1FD8 /* AlarmCell.xib */; };
 		7D866F74263D286D008B1FD8 /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D866F72263D286D008B1FD8 /* TimerCell.swift */; };
@@ -42,6 +41,9 @@
 		7D9E2B3D2639603F00834653 /* Stalarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E2B3B2639603F00834653 /* Stalarm.xcdatamodeld */; };
 		7D9E2B3F2639604000834653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E2B3E2639604000834653 /* Assets.xcassets */; };
 		7D9E2B422639604000834653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E2B402639604000834653 /* LaunchScreen.storyboard */; };
+		7DD3D6F226414CA00007809C /* EditAlarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD3D6F126414CA00007809C /* EditAlarm.storyboard */; };
+		7DD3D6F426414D070007809C /* EditAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3D6F326414D070007809C /* EditAlarmViewController.swift */; };
+		7DD3D6F62641544D0007809C /* MusicListTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD3D6F52641544D0007809C /* MusicListTable.storyboard */; };
 		7DF108AE263968EA007BA26A /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108AD263968EA007BA26A /* MainTabBar.swift */; };
 		7DF108B126396C38007BA26A /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B026396C38007BA26A /* EventListViewController.swift */; };
 		7DF108B526398E9E007BA26A /* ConvertTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF108B426398E9E007BA26A /* ConvertTimeViewController.swift */; };
@@ -59,7 +61,6 @@
 		7D005E9D263BC4F60050D20A /* RepeatDayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDayButton.swift; sourceTree = "<group>"; };
 		7D005E9F263C3F990050D20A /* AddTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTimer.storyboard; sourceTree = "<group>"; };
 		7D005EA2263C3FAD0050D20A /* AddTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimerViewController.swift; sourceTree = "<group>"; };
-		7D866F67263D1F51008B1FD8 /* EventListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewController.swift; sourceTree = "<group>"; };
 		7D866F6B263D23DA008B1FD8 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		7D866F6C263D23DA008B1FD8 /* AlarmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmCell.xib; sourceTree = "<group>"; };
 		7D866F72263D286D008B1FD8 /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
@@ -89,6 +90,9 @@
 		7D9E2B3E2639604000834653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D9E2B412639604000834653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D9E2B432639604000834653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DD3D6F126414CA00007809C /* EditAlarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditAlarm.storyboard; sourceTree = "<group>"; };
+		7DD3D6F326414D070007809C /* EditAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmViewController.swift; sourceTree = "<group>"; };
+		7DD3D6F52641544D0007809C /* MusicListTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicListTable.storyboard; sourceTree = "<group>"; };
 		7DF108AD263968EA007BA26A /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		7DF108B026396C38007BA26A /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		7DF108B426398E9E007BA26A /* ConvertTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTimeViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				7D9E2B362639603F00834653 /* AddAlarmViewController.swift */,
-				7D866FCC26401075008B1FD8 /* MusicTableVIewController.swift */,
 			);
 			path = "Add Alarm";
 			sourceTree = "<group>";
@@ -150,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				7DF108B026396C38007BA26A /* EventListViewController.swift */,
-				7D866F67263D1F51008B1FD8 /* EventListTableViewController.swift */,
 			);
 			path = "Event List";
 			sourceTree = "<group>";
@@ -244,9 +246,18 @@
 			path = Stalarm;
 			sourceTree = "<group>";
 		};
+		7DD3D6F026414C8C0007809C /* Edit Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				7DD3D6F326414D070007809C /* EditAlarmViewController.swift */,
+			);
+			path = "Edit Alarm";
+			sourceTree = "<group>";
+		};
 		7DF108AF26396C22007BA26A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7DD3D6F026414C8C0007809C /* Edit Alarm */,
 				7D866F86263DA408008B1FD8 /* Alarm Triggered */,
 				7D866F79263D4BF6008B1FD8 /* Onboarding */,
 				7D005EA1263C3F9E0050D20A /* Add Timer */,
@@ -255,6 +266,7 @@
 				7D866F66263D1F3A008B1FD8 /* Event List */,
 				7DF108B82639A0EF007BA26A /* MainTabBarController.swift */,
 				7DF108BD263A775D007BA26A /* MainViewController.swift */,
+				7D866FCC26401075008B1FD8 /* MusicTableVIewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,6 +289,8 @@
 				7D005E9F263C3F990050D20A /* AddTimer.storyboard */,
 				7D866F77263D48A2008B1FD8 /* Onboarding.storyboard */,
 				7D866F82263DA1FD008B1FD8 /* AlarmTriggered.storyboard */,
+				7DD3D6F126414CA00007809C /* EditAlarm.storyboard */,
+				7DD3D6F52641544D0007809C /* MusicListTable.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,6 +392,7 @@
 			files = (
 				7D866F75263D286D008B1FD8 /* TimerCell.xib in Resources */,
 				7D005E9B263BBAC10050D20A /* AddAlarm.storyboard in Resources */,
+				7DD3D6F226414CA00007809C /* EditAlarm.storyboard in Resources */,
 				7D866F6E263D23DA008B1FD8 /* AlarmCell.xib in Resources */,
 				7D866FC926400751008B1FD8 /* Once Again.wav in Resources */,
 				7D866FC7264005D3008B1FD8 /* Tenderness.wav in Resources */,
@@ -389,6 +404,7 @@
 				7D866FCB26400873008B1FD8 /* Adventure.wav in Resources */,
 				7D9E2B3A2639603F00834653 /* Main.storyboard in Resources */,
 				7D866F78263D48A2008B1FD8 /* Onboarding.storyboard in Resources */,
+				7DD3D6F62641544D0007809C /* MusicListTable.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D005EA3263C3FAD0050D20A /* AddTimerViewController.swift in Sources */,
+				7DD3D6F426414D070007809C /* EditAlarmViewController.swift in Sources */,
 				7D9E2B3D2639603F00834653 /* Stalarm.xcdatamodeld in Sources */,
 				7D9E2B372639603F00834653 /* AddAlarmViewController.swift in Sources */,
 				7D866F74263D286D008B1FD8 /* TimerCell.swift in Sources */,
@@ -417,7 +434,6 @@
 				7D005E92263AB8BD0050D20A /* CoreDataManager.swift in Sources */,
 				7DF108B526398E9E007BA26A /* ConvertTimeViewController.swift in Sources */,
 				7D866F7F263D5613008B1FD8 /* SceneManager.swift in Sources */,
-				7D866F68263D1F51008B1FD8 /* EventListTableViewController.swift in Sources */,
 				7DF108BE263A775D007BA26A /* MainViewController.swift in Sources */,
 				7D9E2B332639603F00834653 /* AppDelegate.swift in Sources */,
 				7D9E2B352639603F00834653 /* SceneDelegate.swift in Sources */,

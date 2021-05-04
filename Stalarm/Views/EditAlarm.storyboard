@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wjO-2e-U2y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -9,47 +9,47 @@
     </dependencies>
     <scenes>
         <!--Add Alarm-->
-        <scene sceneID="s0d-6b-0kx">
+        <scene sceneID="INT-o1-h9C">
             <objects>
-                <viewController storyboardIdentifier="AddAlarmVC" id="Y6W-OH-hqX" customClass="AddAlarmViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController storyboardIdentifier="EditAlarmVC" id="wjO-2e-U2y" customClass="EditAlarmViewController" customModule="Stalarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2m-I2-qcM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-Dl-ptv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu2-F4-sC7">
                                 <rect key="frame" x="20" y="31" width="156" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alarm Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="By1-mg-G7F">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alarm Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fL-3C-vkH">
                                 <rect key="frame" x="20" y="67.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDV-Pc-mbx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVO-b6-ae8">
                                 <rect key="frame" x="20" y="120.5" width="38" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOc-I6-NHK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLj-Ci-S3L">
                                 <rect key="frame" x="20" y="173" width="54" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="iEp-0c-QP1">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="4Pl-Ut-vRw">
                                 <rect key="frame" x="310" y="110.5" width="84" height="40.5"/>
                                 <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="Ivc-ss-C4U"/>
+                                    <constraint firstAttribute="width" constant="84" id="XHt-tC-hTS"/>
                                 </constraints>
                             </datePicker>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HTq-Ro-8Bg">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8PN-6H-hhe">
                                 <rect key="frame" x="124" y="167" width="270" height="32"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wb-hB-jaF" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPU-NI-s4F" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -63,10 +63,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uEc-wN-Ka8"/>
+                                            <action selector="repeatDayTappedWithSender:" destination="wjO-2e-U2y" eventType="touchUpInside" id="L2W-FA-WGf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0s-gf-aCb" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUj-Ab-lOD" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
                                         <rect key="frame" x="40" y="0.0" width="30" height="32"/>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -80,10 +80,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BRv-Xb-xNG"/>
+                                            <action selector="repeatDayTappedWithSender:" destination="wjO-2e-U2y" eventType="touchUpInside" id="PZ7-bN-qI9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqR-i3-hki" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-Hg-HNh" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
                                         <rect key="frame" x="80" y="0.0" width="30" height="32"/>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -97,10 +97,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Yqu-86-Leb"/>
+                                            <action selector="repeatDayTappedWithSender:" destination="wjO-2e-U2y" eventType="touchUpInside" id="9s7-SF-y7F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-rg-Tzo" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ut1-ze-DeE" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
                                         <rect key="frame" x="120" y="0.0" width="30" height="32"/>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -114,10 +114,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0W6-0t-amK"/>
+                                            <action selector="repeatDayTappedWithSender:" destination="wjO-2e-U2y" eventType="touchUpInside" id="Jjd-L5-xED"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1s-25-3dR" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-Yc-eW4" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
                                         <rect key="frame" x="160" y="0.0" width="30" height="32"/>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -131,10 +131,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="drD-0O-NGQ"/>
+                                            <action selector="repeatDayTappedWithSender:" destination="wjO-2e-U2y" eventType="touchUpInside" id="i9n-ff-3yB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIp-cI-h36" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix7-4o-ZCe" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
                                         <rect key="frame" x="200" y="0.0" width="30" height="32"/>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -148,10 +148,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C5K-Vc-Qh7"/>
+                                            <action selector="repeatDayTappedWithSender:" destination="wjO-2e-U2y" eventType="touchUpInside" id="agK-gB-AQr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNP-Ss-bYf" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e68-6d-ghW" customClass="RepeatDayButton" customModule="Stalarm" customModuleProvider="target">
                                         <rect key="frame" x="240" y="0.0" width="30" height="32"/>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -165,120 +165,122 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="repeatDayTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FP0-ls-aVL"/>
+                                            <action selector="repeatDayTappedWithSender:" destination="wjO-2e-U2y" eventType="touchUpInside" id="SSR-f2-eHc"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STf-w4-mdF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-XX-tCj">
                                 <rect key="frame" x="20" y="225" width="45.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hie-KT-MnQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-1H-7OW">
                                 <rect key="frame" x="233" y="218" width="160.5" height="34"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CAY-7U-Fby">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rUU-RW-Nb4">
                                         <rect key="frame" x="144" y="10" width="12.5" height="16.5"/>
                                         <color key="tintColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Adventure" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqd-Kw-dTV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Adventure" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qib-MP-5id">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="34"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="9Qh-mi-VzD"/>
-                                            <constraint firstAttribute="width" constant="140" id="jwv-i3-ObF"/>
+                                            <constraint firstAttribute="height" constant="34" id="9oU-2e-ucA"/>
+                                            <constraint firstAttribute="width" constant="140" id="VYJ-AH-uJm"/>
                                         </constraints>
                                         <color key="textColor" red="0.50980392159999999" green="0.44705882349999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="MusicNameTapped:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="8rU-P5-4F6"/>
+                                            <action selector="musicNameTapped:" destination="wjO-2e-U2y" eventType="editingDidBegin" id="JFF-mj-aiq"/>
                                         </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Hqd-Kw-dTV" secondAttribute="bottom" id="0uF-wX-kfq"/>
-                                    <constraint firstItem="Hqd-Kw-dTV" firstAttribute="top" secondItem="Hie-KT-MnQ" secondAttribute="top" id="3BT-UI-Via"/>
-                                    <constraint firstItem="CAY-7U-Fby" firstAttribute="leading" secondItem="Hqd-Kw-dTV" secondAttribute="trailing" constant="4" id="8OL-g1-cvm"/>
-                                    <constraint firstAttribute="trailing" secondItem="CAY-7U-Fby" secondAttribute="trailing" constant="4" id="PCE-7W-U11"/>
-                                    <constraint firstItem="CAY-7U-Fby" firstAttribute="top" secondItem="Hie-KT-MnQ" secondAttribute="top" constant="8" id="Ugs-od-SX7"/>
-                                    <constraint firstItem="Hqd-Kw-dTV" firstAttribute="leading" secondItem="Hie-KT-MnQ" secondAttribute="leading" id="X4g-vW-njx"/>
+                                    <constraint firstItem="rUU-RW-Nb4" firstAttribute="leading" secondItem="qib-MP-5id" secondAttribute="trailing" constant="4" id="Ar9-bd-1BR"/>
+                                    <constraint firstItem="rUU-RW-Nb4" firstAttribute="top" secondItem="TgU-1H-7OW" secondAttribute="top" constant="8" id="ISO-tP-oSB"/>
+                                    <constraint firstItem="qib-MP-5id" firstAttribute="top" secondItem="TgU-1H-7OW" secondAttribute="top" id="f9Y-6V-Mnn"/>
+                                    <constraint firstItem="qib-MP-5id" firstAttribute="leading" secondItem="TgU-1H-7OW" secondAttribute="leading" id="pEe-jz-gcy"/>
+                                    <constraint firstAttribute="trailing" secondItem="rUU-RW-Nb4" secondAttribute="trailing" constant="4" id="vBa-X6-vU7"/>
+                                    <constraint firstAttribute="bottom" secondItem="qib-MP-5id" secondAttribute="bottom" id="zgD-my-6ys"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snooze Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6o-dk-90r">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snooze Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nt-6N-M4r">
                                 <rect key="frame" x="20" y="265" width="140" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minimumValue="0.5" maximumValue="5" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hu2-Nt-kR8">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minimumValue="0.5" maximumValue="5" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dP9-gv-mZ7">
                                 <rect key="frame" x="300" y="299" width="94" height="32"/>
                                 <connections>
-                                    <action selector="walkingMinutesChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="gQM-Mu-rIm"/>
+                                    <action selector="activityDurationChanged:" destination="wjO-2e-U2y" eventType="valueChanged" id="0HR-CW-QaF"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ0-f4-2sB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bae-oW-0Ut">
                                 <rect key="frame" x="200" y="305" width="80" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="FI7-CV-4rG"/>
+                                    <constraint firstAttribute="width" constant="80" id="0Yk-0M-mZH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAp-Oc-GWb">
-                                <rect key="frame" x="20" y="304" width="126" height="22.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuy-Ab-3iy">
+                                <rect key="frame" x="20" y="305" width="124" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <viewLayoutGuide key="safeArea" id="PFW-rY-D0A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hie-KT-MnQ" secondAttribute="trailing" constant="20.5" id="0Re-gW-9TT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mmC-Dl-ptv" secondAttribute="trailing" id="2N8-dd-wHh"/>
-                            <constraint firstItem="mmC-Dl-ptv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="5va-lc-OxX"/>
-                            <constraint firstItem="mmC-Dl-ptv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="31" id="6aJ-un-1g5"/>
-                            <constraint firstItem="WOc-I6-NHK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="7PH-44-sdb"/>
-                            <constraint firstItem="iEp-0c-QP1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wDV-Pc-mbx" secondAttribute="trailing" id="9GD-wV-EDd"/>
-                            <constraint firstItem="HTq-Ro-8Bg" firstAttribute="top" secondItem="iEp-0c-QP1" secondAttribute="bottom" constant="16" id="9cN-Sq-hRe"/>
-                            <constraint firstItem="GAp-Oc-GWb" firstAttribute="top" secondItem="d6o-dk-90r" secondAttribute="bottom" constant="17.5" id="DKP-wc-udf"/>
-                            <constraint firstItem="WOc-I6-NHK" firstAttribute="top" secondItem="wDV-Pc-mbx" secondAttribute="bottom" constant="32" id="EWZ-Qb-9hb"/>
-                            <constraint firstItem="wDV-Pc-mbx" firstAttribute="top" secondItem="By1-mg-G7F" secondAttribute="bottom" constant="19" id="F7J-Dr-jy0"/>
-                            <constraint firstItem="Hie-KT-MnQ" firstAttribute="top" secondItem="HTq-Ro-8Bg" secondAttribute="bottom" constant="19" id="HXP-FA-nnr"/>
-                            <constraint firstItem="GAp-Oc-GWb" firstAttribute="centerY" secondItem="WQ0-f4-2sB" secondAttribute="centerY" id="J3t-Ic-oMG"/>
-                            <constraint firstItem="iEp-0c-QP1" firstAttribute="top" secondItem="By1-mg-G7F" secondAttribute="bottom" constant="9" id="JXK-fy-KCE"/>
-                            <constraint firstItem="WQ0-f4-2sB" firstAttribute="top" secondItem="d6o-dk-90r" secondAttribute="bottom" constant="18.5" id="OMe-6p-QcG"/>
-                            <constraint firstItem="Hu2-Nt-kR8" firstAttribute="leading" secondItem="WQ0-f4-2sB" secondAttribute="trailing" constant="20" id="PvX-se-GYM"/>
-                            <constraint firstItem="Hu2-Nt-kR8" firstAttribute="top" secondItem="d6o-dk-90r" secondAttribute="bottom" constant="12.5" id="VQf-PQ-boN"/>
-                            <constraint firstItem="STf-w4-mdF" firstAttribute="top" secondItem="WOc-I6-NHK" secondAttribute="bottom" constant="31.5" id="Vy8-08-BYR"/>
-                            <constraint firstItem="d6o-dk-90r" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="WuC-RX-jIx"/>
-                            <constraint firstItem="STf-w4-mdF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="XDv-6B-fA1"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HTq-Ro-8Bg" secondAttribute="trailing" constant="20" id="ZLu-Eg-M8e"/>
-                            <constraint firstItem="d6o-dk-90r" firstAttribute="top" secondItem="STf-w4-mdF" secondAttribute="bottom" constant="19.5" id="cQZ-lj-qFl"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hu2-Nt-kR8" secondAttribute="trailing" constant="20" id="coi-0v-ka3"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="By1-mg-G7F" secondAttribute="trailing" constant="20" id="cph-R1-Ygk"/>
-                            <constraint firstItem="wDV-Pc-mbx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="fr4-OH-CkD"/>
-                            <constraint firstItem="GAp-Oc-GWb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hIw-Cr-PMs"/>
-                            <constraint firstItem="By1-mg-G7F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ktQ-Np-ULP"/>
-                            <constraint firstItem="iEp-0c-QP1" firstAttribute="centerY" secondItem="wDV-Pc-mbx" secondAttribute="centerY" id="y6p-QK-Az0"/>
-                            <constraint firstItem="By1-mg-G7F" firstAttribute="top" secondItem="mmC-Dl-ptv" secondAttribute="bottom" constant="15" id="yKs-gS-DqT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iEp-0c-QP1" secondAttribute="trailing" constant="20" id="ygu-kb-bYM"/>
+                            <constraint firstItem="WVO-b6-ae8" firstAttribute="leading" secondItem="PFW-rY-D0A" secondAttribute="leading" constant="20" id="1Gl-vJ-Iwb"/>
+                            <constraint firstItem="bae-oW-0Ut" firstAttribute="top" secondItem="1Nt-6N-M4r" secondAttribute="bottom" constant="18.5" id="9W9-Pn-IgA"/>
+                            <constraint firstItem="PFW-rY-D0A" firstAttribute="trailing" secondItem="TgU-1H-7OW" secondAttribute="trailing" constant="20.5" id="9nT-tV-VVQ"/>
+                            <constraint firstItem="1Nt-6N-M4r" firstAttribute="top" secondItem="z4B-XX-tCj" secondAttribute="bottom" constant="19.5" id="AMY-mo-yF5"/>
+                            <constraint firstItem="PFW-rY-D0A" firstAttribute="trailing" secondItem="6fL-3C-vkH" secondAttribute="trailing" constant="20" id="AtB-Ry-nkQ"/>
+                            <constraint firstItem="Iuy-Ab-3iy" firstAttribute="centerY" secondItem="bae-oW-0Ut" secondAttribute="centerY" id="DjB-0W-N2G"/>
+                            <constraint firstItem="6fL-3C-vkH" firstAttribute="top" secondItem="Vu2-F4-sC7" secondAttribute="bottom" constant="15" id="EFW-F4-afq"/>
+                            <constraint firstItem="PFW-rY-D0A" firstAttribute="trailing" secondItem="dP9-gv-mZ7" secondAttribute="trailing" constant="20" id="G23-iD-TGw"/>
+                            <constraint firstItem="SLj-Ci-S3L" firstAttribute="top" secondItem="WVO-b6-ae8" secondAttribute="bottom" constant="32" id="Kmr-OV-lxX"/>
+                            <constraint firstItem="WVO-b6-ae8" firstAttribute="top" secondItem="6fL-3C-vkH" secondAttribute="bottom" constant="19" id="MLI-nn-eBP"/>
+                            <constraint firstItem="TgU-1H-7OW" firstAttribute="top" secondItem="8PN-6H-hhe" secondAttribute="bottom" constant="19" id="NjN-LG-JJ5"/>
+                            <constraint firstItem="8PN-6H-hhe" firstAttribute="top" secondItem="4Pl-Ut-vRw" secondAttribute="bottom" constant="16" id="Wyo-Pd-jE1"/>
+                            <constraint firstItem="Vu2-F4-sC7" firstAttribute="leading" secondItem="PFW-rY-D0A" secondAttribute="leading" constant="20" id="Xdm-k4-USA"/>
+                            <constraint firstItem="SLj-Ci-S3L" firstAttribute="leading" secondItem="PFW-rY-D0A" secondAttribute="leading" constant="20" id="dfy-TV-zak"/>
+                            <constraint firstItem="Vu2-F4-sC7" firstAttribute="top" secondItem="PFW-rY-D0A" secondAttribute="top" constant="31" id="eBz-4E-Ewr"/>
+                            <constraint firstItem="dP9-gv-mZ7" firstAttribute="top" secondItem="1Nt-6N-M4r" secondAttribute="bottom" constant="12.5" id="eb1-ae-vpX"/>
+                            <constraint firstItem="Iuy-Ab-3iy" firstAttribute="leading" secondItem="PFW-rY-D0A" secondAttribute="leading" constant="20" id="f82-bu-sHa"/>
+                            <constraint firstItem="4Pl-Ut-vRw" firstAttribute="top" secondItem="6fL-3C-vkH" secondAttribute="bottom" constant="9" id="fGe-qg-y9C"/>
+                            <constraint firstItem="Iuy-Ab-3iy" firstAttribute="top" secondItem="1Nt-6N-M4r" secondAttribute="bottom" constant="18.5" id="o9y-UJ-C5s"/>
+                            <constraint firstItem="z4B-XX-tCj" firstAttribute="leading" secondItem="PFW-rY-D0A" secondAttribute="leading" constant="20" id="pMr-fd-qNe"/>
+                            <constraint firstItem="4Pl-Ut-vRw" firstAttribute="centerY" secondItem="WVO-b6-ae8" secondAttribute="centerY" id="pzI-V9-Vnr"/>
+                            <constraint firstItem="PFW-rY-D0A" firstAttribute="trailing" secondItem="8PN-6H-hhe" secondAttribute="trailing" constant="20" id="rvh-xb-vdO"/>
+                            <constraint firstItem="6fL-3C-vkH" firstAttribute="leading" secondItem="PFW-rY-D0A" secondAttribute="leading" constant="20" id="uMI-Ge-3cC"/>
+                            <constraint firstItem="z4B-XX-tCj" firstAttribute="top" secondItem="SLj-Ci-S3L" secondAttribute="bottom" constant="31.5" id="upv-RT-K5n"/>
+                            <constraint firstItem="dP9-gv-mZ7" firstAttribute="leading" secondItem="bae-oW-0Ut" secondAttribute="trailing" constant="20" id="vSN-fh-KFC"/>
+                            <constraint firstItem="PFW-rY-D0A" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vu2-F4-sC7" secondAttribute="trailing" id="vsB-9s-AkN"/>
+                            <constraint firstItem="1Nt-6N-M4r" firstAttribute="leading" secondItem="PFW-rY-D0A" secondAttribute="leading" constant="20" id="wpP-yh-cDr"/>
+                            <constraint firstItem="4Pl-Ut-vRw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WVO-b6-ae8" secondAttribute="trailing" id="yoB-7K-nbg"/>
+                            <constraint firstItem="PFW-rY-D0A" firstAttribute="trailing" secondItem="4Pl-Ut-vRw" secondAttribute="trailing" constant="20" id="zvm-gI-b7k"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Alarm" id="uRX-iz-Xiw"/>
+                    <navigationItem key="navigationItem" title="Add Alarm" id="RCb-8b-9Zy"/>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="alarmNameField" destination="By1-mg-G7F" id="EZV-mf-78C"/>
-                        <outlet property="alarmTriggerTime" destination="iEp-0c-QP1" id="hdT-Td-pWQ"/>
-                        <outlet property="musicNameField" destination="Hqd-Kw-dTV" id="zjm-0N-0V9"/>
-                        <outlet property="walkingMinutesLabel" destination="WQ0-f4-2sB" id="iJa-Ie-Wgj"/>
+                        <outlet property="activityDurationLabel" destination="bae-oW-0Ut" id="SiO-mM-zs9"/>
+                        <outlet property="activityDurationStepper" destination="dP9-gv-mZ7" id="DDt-vr-3cO"/>
+                        <outlet property="alarmDatePicker" destination="4Pl-Ut-vRw" id="adL-Yy-gmR"/>
+                        <outlet property="alarmName" destination="6fL-3C-vkH" id="EDT-xU-cKT"/>
+                        <outlet property="musicNameField" destination="qib-MP-5id" id="Hei-vs-udA"/>
+                        <outlet property="repeatDayStack" destination="8PN-6H-hhe" id="2g1-dX-GJz"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fd2-7N-XSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1813.0434782608697" y="18.75"/>
         </scene>

@@ -29,6 +29,7 @@ class EventListViewController: MainViewController {
         }
         
         self.setupSearchBar()
+        self.setupNavBar()
         self.setupSegmentedControl()
         self.setupInitialTableView()
     }
@@ -47,6 +48,13 @@ class EventListViewController: MainViewController {
         navigationItem.searchController = searchController
     }
     
+    private func setupNavBar() {
+        let edit = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
+        edit.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        navigationItem.leftBarButtonItem = edit
+    }
+    
     private func setupSegmentedControl() {
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         tableTypeSegmentedControl.setTitleTextAttributes(titleTextAttributes, for:.normal)
@@ -62,6 +70,11 @@ class EventListViewController: MainViewController {
         eventTable.register(UINib(nibName: "AlarmCell", bundle: nil), forCellReuseIdentifier: "AlarmCell")
         
         eventTable.tableFooterView = UIView()
+    }
+    
+    @objc private func editTapped() {
+        self.eventTable.isEditing.toggle()
+        self.eventTable.reloadData()
     }
     
     private func fetchData() {
@@ -146,6 +159,9 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.alarmSwitch.isOn = alarm.active
             cell.alarmSwitch.addTarget(self, action: #selector(alarmSwitchTapped), for: .valueChanged)
             cell.alarmSwitch.tag = indexPath.row
+            cell.editingAccessoryType = .disclosureIndicator
+            
+            cell.alarmSwitch.isHidden = tableView.isEditing
             
             return cell
         } else {
@@ -166,6 +182,17 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
             
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "EditAlarm", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "EditAlarmVC") as! EditAlarmViewController
+
+        vc.alarm = alarmList[indexPath.row]
+        vc.delegate = self
+        let navController = UINavigationController(rootViewController: vc)
+        
+        present(navController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

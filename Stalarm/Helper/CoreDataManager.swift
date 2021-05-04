@@ -82,6 +82,18 @@ final class CoreDataManager {
         self.saveContext()
     }
     
+    func editAlarm(alarm: Alarm, name: String, time: Date, repeatDay: [String], music: String, walkDuration: Int16) {
+        let context = persistentContainer.viewContext
+        
+        alarm.name = name
+        alarm.time = time
+        alarm.repeatDay = repeatDay
+        alarm.music = music
+        alarm.walkDuration = walkDuration
+        
+        self.saveContext()
+    }
+    
     func setAlarmStatus(to status: Bool, for alarm: Alarm) {
         alarm.active = status
         

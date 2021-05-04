@@ -91,8 +91,9 @@ class AddAlarmViewController: UIViewController {
     
     
     @IBAction func MusicNameTapped(_ sender: UITextField) {
-        let storyboard = UIStoryboard(name: "AddAlarm", bundle: nil)
+        let storyboard = UIStoryboard(name: "MusicListTable", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "MusicListVC") as! MusicTableViewController
+        
         vc.delegate = self
         vc.selectedMusic = alarmMusic
         
