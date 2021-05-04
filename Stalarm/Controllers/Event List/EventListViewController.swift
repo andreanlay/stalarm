@@ -160,7 +160,12 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
             
             let timer = timerList[indexPath.row]
             cell.timerNameLabel.text = timer.name
-            cell.timerCountdownLabel.text = convertSecondToNormal(for: timer.duration)
+            if timer.duration != 0 {
+                cell.timerCountdownLabel.text = convertSecondToNormal(for: timer.duration)
+            } else {
+                cell.timerCountdownLabel.text = "Time's up!"
+                cell.timerActionButton.isEnabled = false
+            }
             cell.timerActionButton.tag = indexPath.row
             cell.timerActionButton.addTarget(self, action: #selector(timerActionTapped), for: .touchUpInside)
             
@@ -218,7 +223,7 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
         CoreDataManager.shared.setAlarmStatus(to: sender.isOn, for: alarm)
         
         if sender.isOn {
-            NotificationManager.shared.scheduleRepeatedNotification(title: alarm.name!, for: alarm.repeatDay!, on: alarm.time!, stopDuration: alarm.walkDuration, musicName: alarm.music!)
+//            NotificationManager.shared.scheduleRepeatedNotification(title: alarm.name!, for: alarm.repeatDay!, on: alarm.time!, stopDuration: alarm.walkDuration, musicName: alarm.music!)
         } else {
             NotificationManager.shared.cancelNotifications(for: alarm)
         }
