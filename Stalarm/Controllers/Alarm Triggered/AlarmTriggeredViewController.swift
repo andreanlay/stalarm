@@ -14,6 +14,7 @@ class AlarmTriggeredViewController: UIViewController {
     
     var alarmTitle: String!
     var alarmStopDuration: Int16!
+    var alarmMusic: String!
     
     private var timer = Timer()
     
@@ -46,7 +47,8 @@ class AlarmTriggeredViewController: UIViewController {
     }
     
     @IBAction func snoozeTapped(_ sender: UIButton) {
-        
+        NotificationManager.shared.scheduleSnoozedNotification(title: alarmTitle, activityDuration: alarmStopDuration, musicName: alarmMusic)
+        performSegue(withIdentifier: "SnoozeSegue", sender: self)
     }
     
     @IBAction func stopTapped(_ sender: UIButton) {

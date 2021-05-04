@@ -41,6 +41,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if let vc = storyboard.instantiateViewController(withIdentifier: "AlarmTriggeredVC") as? AlarmTriggeredViewController {
             vc.alarmTitle = response.notification.request.content.userInfo["title"] as? String
             vc.alarmStopDuration = response.notification.request.content.userInfo["duration"] as? Int16
+            vc.alarmMusic = response.notification.request.content.userInfo["music"] as? String
             
             let window = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window
             window?.rootViewController = vc

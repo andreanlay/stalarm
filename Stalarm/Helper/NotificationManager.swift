@@ -47,7 +47,8 @@ class NotificationManager {
         content.subtitle = "Let's get moving!"
         content.userInfo = [
             "title": title,
-            "duration": duration
+            "duration": duration,
+            "music": musicName
         ]
         content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "Tenderness.wav"))
         
@@ -70,6 +71,21 @@ class NotificationManager {
         }
     }
     
+    func scheduleSnoozedNotification(title: String, activityDuration: Int16, musicName: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.subtitle = "Let's get moving!"
+        content.userInfo = [
+            "title": title,
+            "duration": activityDuration,
+            "music": musicName
+        ]
+        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "\(musicName).wav"))
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 300, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
     
     func cancelNotifications(for alarm: Alarm) {
         let identifier = getIdentifier(for: alarm.name!, on: alarm.time!)

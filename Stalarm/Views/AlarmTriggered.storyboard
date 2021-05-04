@@ -109,6 +109,7 @@
                         <outlet property="dateLabel" destination="lcx-UI-88P" id="iKF-LN-su4"/>
                         <outlet property="timeLabel" destination="JHB-Aa-MWX" id="KEM-HK-GYm"/>
                         <segue destination="6Cx-68-7sW" kind="presentation" identifier="StopActivitySegue" animates="NO" modalPresentationStyle="fullScreen" id="8AQ-QR-xU6"/>
+                        <segue destination="td9-rP-gSH" kind="presentation" identifier="SnoozeSegue" modalPresentationStyle="fullScreen" id="bNH-TO-jbG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,12 +207,17 @@
         <!--Main-->
         <scene sceneID="bZv-Xc-LoS">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="td9-rP-gSH" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" id="td9-rP-gSH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DKy-1e-dgp"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHV-ik-zJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581" y="50"/>
+            <point key="canvasLocation" x="1595" y="60"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bNH-TO-jbG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
