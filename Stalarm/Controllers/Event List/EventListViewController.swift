@@ -28,7 +28,6 @@ class EventListViewController: MainViewController {
             customTabBarController.eventDelegate = self
         }
         
-        self.setupSearchBar()
         self.setupNavBar()
         self.setupSegmentedControl()
         self.setupInitialTableView()
@@ -38,14 +37,6 @@ class EventListViewController: MainViewController {
         super.viewWillAppear(animated)
         
         self.fetchData()
-    }
-    
-    private func setupSearchBar() {
-        if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
-            textfield.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        }
-        searchController.searchBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        navigationItem.searchController = searchController
     }
     
     private func setupNavBar() {
@@ -87,7 +78,7 @@ class EventListViewController: MainViewController {
             timers.append(timer)
         }
         timerTrigger = timers
-        
+
         eventTable.reloadData()
     }
     
